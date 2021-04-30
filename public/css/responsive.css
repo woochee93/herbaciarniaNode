@@ -456,15 +456,22 @@
     width: 100%;
   }
 }
-@media (min-width: 900px) and (max-width: 1600px) {
+@media (min-width: 900px) and (max-width: 1399px) {
   .banner_section .logo2 {
     width: 300px;
-    top: 10px;
+    top: 30%;
     right: 10px;
-    transform: translateY(0);
+    transform: translateY(0%);
   }
 }
-
+@media (min-width: 1400px) and (max-width: 1600px) {
+  .banner_section .logo2 {
+    width: 400px;
+    /* top: 50%; */
+    right: 100px;
+    /* transform: translateY(-50%); */
+  }
+}
 @media (max-width: 900px) {
   .banner_section {
     height: 500px;
