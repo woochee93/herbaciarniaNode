@@ -1,0 +1,22 @@
+extends layout
+   
+block content
+    .newswrap
+      .workshop
+        h1 Warsztaty
+        i.fas.fa-chevron-circle-down
+        each item in datas.item1
+          .item
+             h2=item.title
+             h3=item.created
+             p=item.description
+
+        
+      .news
+        h1 Wydarzenia
+        i.fas.fa-chevron-circle-down
+        each item in datas.item2
+          .item
+             h2=item.title
+             h3=item.created
+             p=item.description

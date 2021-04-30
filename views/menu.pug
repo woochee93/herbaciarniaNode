@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    .menu
+        img.menu(src='./images/menu.png')
+    script.
+        const img = document.querySelector('img.menu')
+        if (window.innerWidth < window.innerHeight) {
+        img.src = './images/menuMobile.png'
+        } else {
+        img.src = './images/menu.png'
+        }
+        window.addEventListener('resize', () => {
+        if (window.innerWidth < window.innerHeight) {
+        img.src = './images/menuMobile.png'
+        } else {
+        img.src = './images/menu.png'
+        }
+        })
+
+

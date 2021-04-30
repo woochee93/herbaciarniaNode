@@ -1,0 +1,22 @@
+extends ../layout
+
+block content
+    h1=title
+    if errors!==undefined 
+        each message in errors.errors 
+            p=message
+    form(method='post')
+        p 
+            label Nazwa
+            input(type="text" name='title')
+        p 
+            label Opis 
+            textarea(name="description")
+        p 
+            label Start 
+            input( type="datetime-local" name="start")   
+        p 
+            label Koniec 
+            input( type="datetime-local" name="end")  
+        p 
+            input(type="submit" value='Zapisz')
