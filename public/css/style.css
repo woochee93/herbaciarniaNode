@@ -1387,7 +1387,12 @@ div.hamburger ul li:nth-of-type(2) a span {
 }
 
 /* /////////////////////////////NEWS */
-
+div.workshop {
+  overflow: hidden;
+}
+div.news {
+  overflow: hidden;
+}
 div.newswrap {
   margin-top: 50px;
   padding: 0;
@@ -1403,35 +1408,63 @@ div.newswrap div.news {
   color: #023117;
   margin: 0 auto;
   width: 70%;
-  min-height: 200px;
-  border-top: 4px solid #023117;
+  min-height: 150px;
 }
 div.newswrap div h1 {
-  margin: 0;
-  margin: 50px 0;
+  padding: 40px 0;
   font-family: "Montserrat", sans-serif;
   font-size: 60px;
+  border-top: 3px solid #023117;
+  cursor: pointer;
+  color: #001f09;
+}
+div.newswrap div h1:hover {
+  color: #004214;
+  letter-spacing: 3px;
 }
 div.newswrap div i {
+  margin: 0 10px 0 auto;
   font-size: 40px;
   position: absolute;
+  top: 50px;
   right: 0;
-  top: 30px;
 }
-div.workshop div.item {
-  margin: 50px 0;
+div.workshop div.item,
+div.news div.item {
+  margin: 50px 0 50px 80px;
+  overflow: hidden;
+  transition: 0.6s;
+  max-height: 0px;
 }
+div.workshop div.item.active,
+div.news div.item.active {
+  max-height: 1000px;
+}
+
+/* div.workshop div.item:first-of-type,
+div.news div.item:first-of-type {
+  height: auto;
+} */
 div.newswrap div div h2 {
-  font-size: 35px;
+  font-size: 38px;
   padding: 5px 20px 5px 0;
   display: inline-block;
 }
 div.newswrap div div h3 {
   font-size: 13px;
+  color: rgb(133, 133, 133);
 }
 div.newswrap div div p {
-  font-size: 18px;
+  font-size: 19px;
   margin: 20px 0;
+  line-height: 28px;
+}
+.fas.fa-chevron-circle-down {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.fas.fa-chevron-circle-down.active {
+  transform: scaleY(-1);
 }
 /* ///////////////admin */
 h1.admin {

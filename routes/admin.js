@@ -47,6 +47,7 @@ router.get("/workshop/add", (req, res) => {
 
 router.post("/news/add", (req, res) => {
   const body = req.body;
+  console.log(req.body);
   const newsData = new News(body);
   const errors = newsData.validateSync();
   console.log(errors);

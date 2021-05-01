@@ -3,20 +3,20 @@ extends layout
 block content
     .newswrap
       .workshop
-        h1 Warsztaty
-        i.fas.fa-chevron-circle-down
+        h1(class='activator' id='workshop') Warsztaty
+        i.fas.fa-chevron-circle-down.activator(id='workshop')
         each item in datas.item1
           .item
              h2=item.title
-             h3=item.created
+             h3(class='date')=item.created
              p=item.description
 
         
       .news
-        h1 Wydarzenia
-        i.fas.fa-chevron-circle-down
+        h1(class='activator' id='news') Wydarzenia
+        i.fas.fa-chevron-circle-down.activator(id='news')
         each item in datas.item2
           .item
              h2=item.title
-             h3=item.created
+             h3(class='date')=item.created
              p=item.description

@@ -66,4 +66,35 @@ const listHamburger2 = document.querySelector("div.hamburger ul");
 btnHamburger.addEventListener("click", () => {
   listHamburger2.classList.toggle("active");
 });
-// duu
+// news date changer to pl format
+const dates = document.querySelectorAll("h3.date");
+dates.forEach((date) => {
+  let localDate = new Date(date.innerHTML).toLocaleDateString();
+  if (localDate[1] == ".") localDate = 0 + localDate;
+
+  date.innerHTML = localDate;
+});
+////////////////show workshop and news
+const itemsNews = document.querySelectorAll("div.news div.item");
+const itemsWorkshop = document.querySelectorAll("div.workshop div.item");
+const btnsactivator = [...document.querySelectorAll(".activator")];
+
+btnsactivator.forEach((button) => {
+  button.addEventListener("click", () => {
+    if (button.id === "workshop") {
+      itemsWorkshop.forEach((itemWorkshop) => {
+        itemWorkshop.classList.toggle("active");
+      });
+    } else {
+      itemsNews.forEach((itemNews) => {
+        itemNews.classList.toggle("active");
+      });
+    }
+    const activeBtn = btnsactivator.filter((activator) => {
+      return activator.id === button.id;
+    });
+    activeBtn.forEach((item) => {
+      item.classList.toggle("active");
+    });
+  });
+});

@@ -157,6 +157,17 @@
   .mean-container .mean-nav ul li a.mean-expand {
     top: 0;
   }
+  div.workshop div.item,
+  div.news div.item {
+    margin: 0;
+  }
+  div.newswrap div h1 {
+    font-size: 35px;
+  }
+  div.newswrap div i {
+    margin: 0;
+    right: 10px;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
