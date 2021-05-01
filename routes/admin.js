@@ -12,12 +12,30 @@ router.all("*", (req, res, next) => {
 });
 
 router.get("/", (req, res) => {
-  res.render("admin/index", { title: "Admin" });
+  const findNews = News.find();
+  const findWorkshop = Workshop.find();
+  // datas to PUG view
+  let datas = {
+    item1: [],
+    item2: [],
+  };
+  //sort by add date to db
+  findNews.find({}).sort({ _id: -1 });
+  findWorkshop.find({}).sort({ _id: -1 });
+  //doc is array db items
+  findWorkshop.find({}, (err, docs) => {
+    datas.item1 = docs;
+  });
+
+  findNews.find({}, (err, docs) => {
+    datas.item2 = docs;
+    res.render("admin/index.pug", { title: "Panel administartora", datas });
+  });
 });
 router.get("/news/add", (req, res) => {
   const now = new Date().toISOString().slice(0, 10);
   res.render("admin/news-form", {
-    title: "Dodaj wiadomość",
+    title: "Dodaj wydarzenie",
     now,
   });
 });

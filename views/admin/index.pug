@@ -1,10 +1,22 @@
 extends ../layout
 
 block content
-    h1=title
-    nav 
-        ul 
-            li 
-                a(href='/admin/news/add') Dodaj artykuł
-            li
-                a(href='/admin/workshop/add') Dodaj warsztat
+    div(class='container')
+        include ./nav.pug
+        h1(class='admin')=title
+        h2(class='admin') Lista artykułów
+        ul(class='admin list') 
+            each item, index in datas.item1
+                li
+                    p=`${index}. ${item.title}`
+                        div.buttons
+                            a(href=`news/edit/${index}`) Edytuj
+                            a(href=`news/delete/${index}`) Usuń
+        h2(class='admin') Lista Warsztatów
+        ul(class='admin list') 
+            each item, index in datas.item2
+                li
+                    p=`${index}. ${item.title}`
+                        div.buttons
+                            a(href=`workshop/edit/${index}`) Edytuj
+                            a(href=`workshop/delete/${index}`) Usuń

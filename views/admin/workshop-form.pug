@@ -1,11 +1,13 @@
 extends ../layout
 
 block content
-    h1=title
+  div(class='container')
+    include ./nav.pug
+    h1(class='admin')=title
     if errors!==undefined 
         each message in errors.errors 
             p=message
-    form(method='post')
+    form(method='post' class='admin')
         p 
             label Nazwa
             input(type="text" name='title')
