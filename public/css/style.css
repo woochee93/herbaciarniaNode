@@ -374,6 +374,7 @@ nav img {
   color: #fff;
   margin: 0px;
   padding-bottom: 30px;
+  height: 130px;
 }
 
 .learnmore_bt {
@@ -524,7 +525,6 @@ nav img {
 .gallery_section {
   width: 100%;
   float: left;
-  padding-bottom: 90px;
 }
 
 .gallery_taital {
@@ -884,6 +884,7 @@ img.menu {
 }
 
 .customer_text {
+  min-height: 100px;
   width: 100%;
   float: left;
   font-size: 22px;
@@ -893,7 +894,7 @@ img.menu {
   margin-top: 20px;
 }
 
-.carousel-indicators li {
+/* .carousel-indicators li {
   position: relative;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -905,13 +906,37 @@ img.menu {
   background-color: #252525;
   border-radius: 20px;
 }
+.carousel-indicators .active {
+  background-color: #004214;
+} */
+.carousel-indicators li {
+  position: relative;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  width: 55px;
+  height: 55px;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: 0px;
+  color: #252525;
+  border-radius: 20px;
+  position: relative;
+  color: black;
+  font-size: 40px;
+  transition: 0.3s;
+}
+.carousel-indicators li i {
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.carousel-indicators .active {
+  color: #004214;
+}
 
 .carousel-indicators {
   bottom: 0px;
-}
-
-.carousel-indicators .active {
-  background-color: #004214;
 }
 
 /* client section end */

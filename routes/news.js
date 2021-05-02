@@ -17,11 +17,10 @@ router.get("/", function (req, res, next) {
   //doc is array db items
   findWorkshop.find({}, (err, docs) => {
     datas.item1 = docs;
-  });
-
-  findNews.find({}, (err, docs) => {
-    datas.item2 = docs;
-    res.render("news", { title: "News", datas });
+    findNews.find({}, (err, docs) => {
+      datas.item2 = docs;
+      res.render("news", { title: "News", datas });
+    });
   });
 });
 
