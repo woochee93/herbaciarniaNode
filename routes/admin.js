@@ -54,7 +54,7 @@ router.post("/news/add", (req, res) => {
     console.log(err);
   });
 
-  res.render("admin/news-form", { title: "Dodaj news", errors });
+  res.render("admin/news-form", { title: "Dodaj wydarzenie", errors });
 });
 
 router.post("/workshop/add", (req, res) => {
@@ -65,7 +65,7 @@ router.post("/workshop/add", (req, res) => {
   workshopData.save((err) => {
     console.log(err);
   });
-  res.render("admin/workshop-form", { title: "Dodaj wydarzenie", errors });
+  res.render("admin/workshop-form", { title: "Dodaj warsztat", errors });
 });
 
 router.get("/news/delete/:id", (req, res) => {
