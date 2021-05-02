@@ -4,19 +4,19 @@ block content
     div(class='container')
         include nav.pug
         h1(class='admin')=title
-        h2(class='admin') Lista artykułów
-        ul(class='admin list') 
-            each item, index in datas.item1
-                li
-                    p=`${index}. ${item.title}`
-                        div.buttons
-                            a(href=`news/edit/${index}`) Edytuj
-                            a(href=`news/delete/${index}`) Usuń
-        h2(class='admin') Lista Warsztatów
+        h2(class='admin') Lista wydarzeń
         ul(class='admin list') 
             each item, index in datas.item2
                 li
-                    p=`${index}. ${item.title}`
+                    p=`${index +1}. ${item.title}`
                         div.buttons
-                            a(href=`workshop/edit/${index}`) Edytuj
-                            a(href=`workshop/delete/${index}`) Usuń
+                            a(href=`/admin/news/edit/${item._id}`) Edytuj
+                            a(href=`/admin/news/delete/${item._id}` onclick=`return confirm('Czy na pewno chcesz usunąć wydarzenie: ${item.title}?')`) Usuń
+        h2(class='admin') Lista Warsztatów
+        ul(class='admin list') 
+            each item, index in datas.item1
+                li
+                    p=`${index+1}. ${item.title}`
+                        div.buttons
+                            a(href=`/admin/workshop/edit/${item._id}`) Edytuj
+                            a(href=`/admin/workshop/delete/${item._id}` onclick=`return confirm('Czy a pewno chcesz usunąć warsztat: ${item.title}?')`) Usuń

@@ -98,3 +98,11 @@ btnsactivator.forEach((button) => {
     });
   });
 });
+
+/////////prompt admin
+const promptLinks = document.querySelectorAll("a.prompt");
+promptLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    confirm("Na pewno chcesz usunąć?");
+  });
+});

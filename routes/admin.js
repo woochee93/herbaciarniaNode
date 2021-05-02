@@ -25,11 +25,10 @@ router.get("/", (req, res) => {
   //doc is array db items
   findWorkshop.find({}, (err, docs) => {
     datas.item1 = docs;
-  });
-
-  findNews.find({}, (err, docs) => {
-    datas.item2 = docs;
-    res.render("admin/index.pug", { title: "Panel administartora", datas });
+    findNews.find({}, (err, docs) => {
+      datas.item2 = docs;
+      res.render("admin/index.pug", { title: "Panel administartora", datas });
+    });
   });
 });
 router.get("/news/add", (req, res) => {
@@ -66,7 +65,20 @@ router.post("/workshop/add", (req, res) => {
   workshopData.save((err) => {
     console.log(err);
   });
-  res.render("admin/workshop-form", { title: "Dodaj news", errors });
+  res.render("admin/workshop-form", { title: "Dodaj wydarzenie", errors });
+});
+
+router.get("/news/delete/:id", (req, res) => {
+  News.findByIdAndDelete(req.params.id, (err) => {
+    console.log(req.params.id);
+    res.redirect("/admin");
+  });
+});
+router.get("/workshop/delete/:id", (req, res) => {
+  Workshop.findByIdAndDelete(req.params.id, (err) => {
+    console.log(req.params.id);
+    res.redirect("/admin");
+  });
 });
 
 module.exports = router;
