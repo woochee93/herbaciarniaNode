@@ -924,6 +924,7 @@ img.menu {
   color: black;
   font-size: 40px;
   transition: 0.3s;
+  cursor: pointer;
 }
 .carousel-indicators li i {
   z-index: 3;
