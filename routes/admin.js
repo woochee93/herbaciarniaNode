@@ -85,7 +85,6 @@ router.post("/workshop/add", upload.single("image"), (req, res) => {
 
 router.get("/news/delete/:id", (req, res) => {
   News.findByIdAndDelete(req.params.id, (err) => {
-    console.log(req.params.id);
     res.redirect("/admin");
   });
 });
@@ -95,5 +94,16 @@ router.get("/workshop/delete/:id", (req, res) => {
     res.redirect("/admin");
   });
 });
-
+// ---------------------START EDIT NEWS/WORKSHOP----------------------
+router.get("/news/edit/:id", (req, res) => {
+  News.findById(req.params.id, (err, news) => {
+    const dateNews = news.created.toISOString().slice(0, 10);
+    res.render("admin/news-edit", {
+      title: "Edytuj wydarzenie",
+      news,
+      dateNews,
+    });
+  });
+});
+// ---------------------END EDIT NEWS/WORKSHOP----------------------
 module.exports = router;
