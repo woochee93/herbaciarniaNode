@@ -1472,25 +1472,39 @@ div.news div.item {
 div.workshop div.item.active,
 div.news div.item.active {
   max-height: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 100px;
 }
 
-/* div.workshop div.item:first-of-type,
-div.news div.item:first-of-type {
-  height: auto;
-} */
 div.newswrap div div h2 {
-  font-size: 38px;
+  font-size: 50px;
   padding: 5px 20px 5px 0;
+  margin-bottom: 80px;
   display: inline-block;
+  flex-basis: 100%;
 }
 div.newswrap div div h3 {
   font-size: 13px;
   color: rgb(133, 133, 133);
+  flex-basis: 100%;
 }
 div.newswrap div div p {
   font-size: 19px;
   margin: 20px 0;
   line-height: 28px;
+}
+div.newswrap div div img + p {
+  flex-basis: 40%;
+  display: block;
+}
+div.newswrap div img {
+  flex-basis: 30%;
+  display: block;
+  width: 400px;
+  max-height: 100%;
 }
 .fas.fa-chevron-circle-down {
   cursor: pointer;
@@ -1507,7 +1521,6 @@ h1.admin {
 form.admin {
   margin: 20px auto;
   display: flex;
-  height: 1000px;
   flex-direction: column;
   justify-content: flex-start;
   flex-wrap: nowrap;

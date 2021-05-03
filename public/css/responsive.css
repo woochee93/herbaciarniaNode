@@ -528,8 +528,17 @@
   div.newswrap div.news {
     width: 98%;
   }
-  div.newswrap div p {
-    font-size: 45px;
+  div.newswrap div div img + p,
+  div.newswrap div img {
+    flex-basis: 95%;
+  }
+  div.newswrap div div h2 {
+    font-size: 35px;
+    margin-bottom: 30px;
+  }
+  div.workshop div.item.active,
+  div.news div.item.active {
+    margin-bottom: 50px;
   }
   div.newswrap div i {
     font-size: 30px;

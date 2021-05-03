@@ -13,7 +13,8 @@ block content
             input(type="date" name='created' value=dateNews)
         p 
             label Zmień zdjęcie 
-            input(type="file" name='image')
+            img#blah(src=news.image style='max-height:200px; margin: 20px; display:block;')
+            input(type="file" name='image' id="imgInp")
         p 
             label Opis 
             textarea(name="description")=news.description

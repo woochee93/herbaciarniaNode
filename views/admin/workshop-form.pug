@@ -19,7 +19,8 @@ block content
             input( type="datetime-local" name="end") 
         p 
             label Zdjęcie 
-            input(type="file" name='image')
+            img#blah(src='/images/instagram-icon.png' style='max-height:200px; margin: 20px; display:block;')
+            input(type="file" name='image' id="imgInp")
         p 
             label Opis 
             textarea(name="description") 

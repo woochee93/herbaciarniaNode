@@ -1,5 +1,5 @@
 extends ../layout
-
+ 
 block content
   div(class='container admin')
     include ./nav.pug
@@ -16,9 +16,12 @@ block content
             input(type="date" name='created' value=now)
         p 
             label Zdjęcie 
-            input(type="file" name='image')
+            img#blah(src='/images/instagram-icon.png' style='max-height:200px; margin: 20px; display:block;')
+            input(type="file" name='image' id="imgInp")
+            
         p 
             label Opis 
             textarea(name="description")
         p 
             input(type="submit" value='Zapisz')
+    

@@ -9,8 +9,10 @@ block content
           .item
              h2=item.title
              h3(class='date')=item.created
+             if item.image
+              img(src=item.image class='workshop')
              p=item.description
-             img(src=item.image)
+             
         
       .news
         h1(class='activator' id='news') Wydarzenia
@@ -19,8 +21,10 @@ block content
           .item
              h2=item.title
              h3(class='date')=item.created
+             if item.image
+              img(src=item.image class='news')
              p=item.description
-             img(src=item.image)
+             
              
         
         

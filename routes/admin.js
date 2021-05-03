@@ -105,5 +105,33 @@ router.get("/news/edit/:id", (req, res) => {
     });
   });
 });
+router.post("/news/edit/:id", upload.single("image"), (req, res) => {
+  if (req.file) req.body.image = `/uploads/${req.file.originalname}`;
+  const body = req.body;
+  News.findByIdAndUpdate(req.params.id, body, (err, news) => {
+    console.log(err);
+    res.redirect(`/admin/news/edit/${req.params.id}`);
+  });
+});
+router.get("/workshop/edit/:id", (req, res) => {
+  Workshop.findById(req.params.id, (err, workshop) => {
+    const startWorkshop = workshop.start.toISOString().slice(0, 19);
+    const endWorkshop = workshop.end.toISOString().slice(0, 19);
+    res.render("admin/workshop-edit", {
+      title: "Edytuj warsztat",
+      workshop,
+      startWorkshop,
+      endWorkshop,
+    });
+  });
+});
+router.post("/workshop/edit/:id", upload.single("image"), (req, res) => {
+  if (req.file) req.body.image = `/uploads/${req.file.originalname}`;
+  const body = req.body;
+  Workshop.findByIdAndUpdate(req.params.id, body, (err, news) => {
+    console.log(err);
+    res.redirect(`/admin/workshop/edit/${req.params.id}`);
+  });
+});
 // ---------------------END EDIT NEWS/WORKSHOP----------------------
 module.exports = router;
