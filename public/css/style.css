@@ -1,7 +1,7 @@
 /*--------------------------------------------------------------------- File Name: style.css ---------------------------------------------------------------------*/
 
 /*--------------------------------------------------------------------- import Fonts ---------------------------------------------------------------------*/
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700");
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
@@ -455,7 +455,8 @@ nav img {
   font-size: 60px;
   color: #00200a;
   font-weight: bold;
-  font-family: "Playfair Display", serif;
+  /* font-family: "Playfair Display", serif; */
+  font-family: "Roboto Slab", serif;
 }
 
 .about_img img {
@@ -819,10 +820,15 @@ img.menu {
   font-size: 40px;
   color: #00200a;
   font-weight: bold;
-  font-family: "Playfair Display", serif;
+  font-family: "Roboto Slab", serif;
 }
-
+h3.decorate_text {
+  font-family: "Roboto Slab", serif;
+  font-size: 24px;
+}
 .client_text {
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
   width: 100%;
   font-size: 16px;
   color: #252525;
@@ -959,6 +965,7 @@ img.menu {
 }
 .email_text form h1 {
   color: white;
+  font-weight: 300;
 }
 .email_text form input,
 .email_text form textarea {
@@ -1002,7 +1009,7 @@ img.menu {
 }
 
 .contact_text {
-  font-family: "Playfair Display", serif;
+  font-family: "Roboto Slab", serif;
   width: 100%;
   float: left;
   text-align: center;
@@ -1108,9 +1115,11 @@ img.menu {
   height: auto;
   padding: 80px 0px;
 }
-
+h1.contact_text {
+  font-size: 45px;
+}
 .useful_text {
-  font-family: "Playfair Display", serif;
+  font-family: "Roboto Slab", serif;
   width: 100%;
   font-size: 24px;
   color: #ffffff;
@@ -1314,6 +1323,7 @@ iframe.facebook {
   color: white;
   font-size: 55px;
   margin-bottom: 50px;
+  font-weight: 300;
 }
 
 .contact_text.address ul li p,
@@ -1321,6 +1331,7 @@ iframe.facebook {
   display: block;
   color: white;
   font-size: 23px;
+  font-weight: 300;
 }
 .contact_text.open_hours ul li {
 }
@@ -1480,6 +1491,7 @@ div.news div.item.active {
 }
 
 div.newswrap div div h2 {
+  font-family: "Roboto Slab", serif;
   font-size: 50px;
   padding: 5px 20px 5px 0;
   display: inline-block;
