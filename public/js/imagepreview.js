@@ -4,6 +4,7 @@ function readURL(input) {
 
     reader.onload = function (e) {
       $("#blah").attr("src", e.target.result);
+      $("#blah").css("display", "block");
     };
 
     reader.readAsDataURL(input.files[0]); // convert to base64 string

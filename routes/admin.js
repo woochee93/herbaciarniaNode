@@ -115,8 +115,14 @@ router.post("/news/edit/:id", upload.single("image"), (req, res) => {
 });
 router.get("/workshop/edit/:id", (req, res) => {
   Workshop.findById(req.params.id, (err, workshop) => {
-    const startWorkshop = workshop.start.toISOString().slice(0, 19);
-    const endWorkshop = workshop.end.toISOString().slice(0, 19);
+    let startWorkshop = "";
+    let endWorkshop = "";
+    if (workshop.start) {
+      startWorkshop = workshop.start.toISOString().slice(0, 19);
+    }
+    if (workshop.end) {
+      endWorkshop = workshop.end.toISOString().slice(0, 19);
+    }
     res.render("admin/workshop-edit", {
       title: "Edytuj warsztat",
       workshop,

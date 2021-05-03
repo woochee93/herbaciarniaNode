@@ -10,14 +10,17 @@ block content
             input(type="text" name='title' value=workshop.title)
         p 
             label Start 
-            input( type="datetime-local" name="start" value=startWorkshop)   
+            input( type="datetime-local" name="start" value=startWorkshop?startWorkshop:'')   
         p 
             label Koniec 
-            input( type="datetime-local" name="end" value=endWorkshop) 
-        
-        p 
-            label Zmień zdjęcie
-            img#blah(src=workshop.image style='max-height:200px; margin: 20px; display:block;')
+            input( type="datetime-local" name="end" value=endWorkshop?endWorkshop:'') 
+        p
+            if workshop.image
+                label Zmień zdjęcie
+                img#blah(src=workshop.image style='max-height:200px; margin: 20px; display:block;')
+            else
+                label Dodaj zdjęcie
+                img#blah(src='#' style='max-height:200px; margin: 20px; display:none;')
             input(type="file" name='image' id="imgInp")
         p 
             label Opis 
