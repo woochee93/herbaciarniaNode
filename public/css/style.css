@@ -1516,6 +1516,7 @@ form.admin {
 form.admin p {
   width: 80%;
   display: block;
+  margin: 10px;
 }
 form.admin p label {
   font-weight: normal;
@@ -1539,18 +1540,24 @@ form.admin p textarea {
   width: 100%;
   min-height: 300px;
   font-family: "Oswald", sans-serif !important;
+  resize: none;
+  border-radius: 10px 10px;
+  padding: 5px;
 }
 
 form.admin p:last-of-type input {
   margin: 20px 0;
   width: 150px;
   color: white;
-  background-color: #014916;
+  background-color: rgb(0, 43, 16);
   padding: 5px 30px;
   border: none;
   font-size: 18px;
   font-weight: lighter;
   cursor: pointer;
+}
+form.admin p:last-of-type:hover input {
+  background-color: rgb(0, 75, 28);
 }
 /* ////////////admin nav */
 nav.admin.nav ul {
@@ -1595,9 +1602,16 @@ ul.admin.list li .buttons {
 }
 ul.admin.list li .buttons a {
   margin: 0 10px;
+  padding: 10px 20px;
+  color: white;
   font-size: 16px;
+  font-weight: lighter;
+  border-radius: 5px 5px;
+  background-color: rgb(0, 43, 16);
 }
-
+ul.admin.list li .buttons a:hover {
+  background-color: rgb(0, 75, 28);
+}
 /* //// admin login */
 input.login {
   font-size: 18px !important;

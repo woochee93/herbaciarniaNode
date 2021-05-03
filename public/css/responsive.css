@@ -610,7 +610,7 @@
   }
   ul.admin.list li .buttons a {
     margin: 20px;
-    padding: 10px;
+    padding: 10px 20px;
   }
 }
 @media (min-width: 781px) and (max-width: 1000px) {
