@@ -1005,7 +1005,6 @@ img.menu {
   font-family: "Playfair Display", serif;
   width: 100%;
   float: left;
-  font-size: 40px;
   text-align: center;
   color: #004214;
   font-weight: bold;
@@ -1319,10 +1318,18 @@ iframe.facebook {
 
 .contact_text.address ul li p,
 .contact_text.open_hours ul li p {
+  display: block;
   color: white;
   font-size: 23px;
 }
-
+.contact_text.open_hours ul li {
+}
+.contact_text.open_hours ul li p {
+  width: 150px;
+  display: inline-block;
+  margin: 10px 50px;
+  text-align: left;
+}
 /* -----hamburger */
 div.hamburger {
   position: fixed;

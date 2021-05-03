@@ -6,6 +6,10 @@
   .header-search {
     padding: 15px 0px;
   }
+  .contact_text.open_hours ul li p {
+    margin: 5px;
+    width: 130px;
+  }
 }
 
 /*------------------------------------------------------------------- 767px x 599px ---------------------------------------------------------------------*/
@@ -76,6 +80,10 @@
   }
   #collapseFilter.d-md-block {
     padding: 30px 0px;
+  }
+  .contact_text.open_hours ul li p {
+    margin: 10px;
+    width: 100px;
   }
 }
 
@@ -168,6 +176,10 @@
     margin: 0;
     right: 10px;
   }
+  .contact_text.open_hours ul li p {
+    margin: 0;
+    width: 100px;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -194,6 +206,10 @@
   }
   a.nav-link {
     font-size: 15px !important;
+  }
+  .contact_text.open_hours ul li p {
+    margin: 5px;
+    width: 150px;
   }
 }
 
