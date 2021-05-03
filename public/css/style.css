@@ -1117,6 +1117,7 @@ h3.decorate_text {
 }
 h1.contact_text {
   font-size: 45px;
+  font-weight: 400;
 }
 .useful_text {
   font-family: "Roboto Slab", serif;
