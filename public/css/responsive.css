@@ -180,6 +180,24 @@
     margin: 0;
     width: 100px;
   }
+  h1.admin {
+    font-size: 25px;
+    margin-left: 20px;
+  }
+  form.admin {
+    width: 100%;
+  }
+  form.admin p {
+    margin: 10px auto;
+    width: 90%;
+  }
+  form.admin p input {
+    max-width: 100%;
+    font-size: 13px;
+  }
+  .container.admin {
+    padding: 0;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -570,6 +588,29 @@
   .contact_text.open_hours ul li p {
     color: white;
     font-size: 16px;
+  }
+  nav.admin.nav ul {
+    flex-direction: column;
+    margin: 20px auto;
+  }
+  nav.admin.nav ul li {
+    margin: 10px 0;
+  }
+  ul.admin.list li {
+    width: 100%;
+  }
+  ul.admin.list li p {
+    text-align: center;
+    width: unset;
+    font-size: 18px;
+  }
+  ul.admin.list li .buttons {
+    position: relative;
+    text-align: center;
+  }
+  ul.admin.list li .buttons a {
+    margin: 20px;
+    padding: 10px;
   }
 }
 @media (min-width: 781px) and (max-width: 1000px) {
