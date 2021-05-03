@@ -3,10 +3,10 @@ const express = require("express");
 var multer = require("multer");
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, "uploads");
+    cb(null, "public/uploads");
   },
   filename: function (req, file, cb) {
-    cb(null, file.fieldname + "-" + Date.now());
+    cb(null, file.originalname);
   },
 });
 var upload = multer({ storage: storage });
@@ -57,7 +57,7 @@ router.get("/workshop/add", (req, res) => {
 });
 
 router.post("/news/add", upload.single("image"), (req, res) => {
-  req.body.image = req.file.path;
+  if (req.file) req.body.image = `/uploads/${req.file.originalname}`;
   const body = req.body;
   // const file = req.file;
   // console.log(file);
@@ -71,7 +71,8 @@ router.post("/news/add", upload.single("image"), (req, res) => {
   res.render("admin/news-form", { title: "Dodaj wydarzenie", errors });
 });
 
-router.post("/workshop/add", (req, res) => {
+router.post("/workshop/add", upload.single("image"), (req, res) => {
+  if (req.file) req.body.image = `/uploads/${req.file.originalname}`;
   const body = req.body;
   const workshopData = new Workshop(body);
   const errors = workshopData.validateSync();

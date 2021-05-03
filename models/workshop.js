@@ -8,6 +8,9 @@ var newsSchema = new Schema({
     type: Date,
     default: Date.now,
   },
+  image: {
+    type: String,
+  },
   start: { type: Date },
   end: { type: Date },
 });
