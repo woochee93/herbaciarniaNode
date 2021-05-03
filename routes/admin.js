@@ -1,4 +1,16 @@
 const express = require("express");
+
+var multer = require("multer");
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, "uploads");
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.fieldname + "-" + Date.now());
+  },
+});
+var upload = multer({ storage: storage });
+
 const News = require("../models/news");
 const Workshop = require("../models/workshop");
 var router = express.Router();
@@ -44,14 +56,16 @@ router.get("/workshop/add", (req, res) => {
   });
 });
 
-router.post("/news/add", (req, res) => {
+router.post("/news/add", upload.single("image"), (req, res) => {
+  req.body.image = req.file.path;
   const body = req.body;
+  // const file = req.file;
+  // console.log(file);
   console.log(req.body);
   const newsData = new News(body);
   const errors = newsData.validateSync();
-  console.log(errors);
   newsData.save((err) => {
-    console.log(err);
+    if (err) console.log(err);
   });
 
   res.render("admin/news-form", { title: "Dodaj wydarzenie", errors });

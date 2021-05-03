@@ -1,5 +1,9 @@
 var express = require("express");
 var router = express.Router();
+
+var multer = require("multer");
+var upload = multer({ dest: "uploads/" });
+
 const News = require("../models/news");
 const Workshop = require("../models/workshop");
 
