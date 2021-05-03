@@ -1,11 +1,12 @@
 extends layout
 
 block content
-    h1= title
-    form(method='post')
-        p
-            input(type='text' name='login' placeholder='Login') 
-        p
-            input(type='password' name='password' placeholder='Hasło') 
-        p 
-            input(type='submit' value='Zaloguj')
+    div(class='container')
+        h1(class='admin')= title
+        form(method='post')
+            p
+                input(type='text' name='login' placeholder='Login' class='login') 
+            p
+                input(type='password' name='password' placeholder='Hasło' class='login') 
+            p 
+                input(type='submit' value='Zaloguj' class='loginbutton')

@@ -1571,3 +1571,27 @@ ul.admin.list li .buttons a {
   margin: 0 10px;
   font-size: 16px;
 }
+
+/* //// admin login */
+input.login {
+  font-size: 18px !important;
+  padding: 5px 15px;
+  font-family: "Oswald", sans-serif !important;
+  display: block;
+  min-width: 200px;
+  border: 1px solid rgb(0, 37, 0);
+  border-radius: 20px 20px;
+  margin: 20px 0;
+}
+input.loginbutton {
+  color: white;
+  background-color: #014916;
+  padding: 5px 30px;
+  border: none;
+  font-size: 18px;
+  font-weight: lighter;
+  cursor: pointer;
+}
+input.loginbutton:hover {
+  background-color: #007924;
+}
