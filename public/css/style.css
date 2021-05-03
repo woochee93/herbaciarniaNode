@@ -1482,7 +1482,6 @@ div.news div.item.active {
 div.newswrap div div h2 {
   font-size: 50px;
   padding: 5px 20px 5px 0;
-  margin-bottom: 80px;
   display: inline-block;
   flex-basis: 100%;
 }
@@ -1490,8 +1489,10 @@ div.newswrap div div h3 {
   font-size: 13px;
   color: rgb(133, 133, 133);
   flex-basis: 100%;
+  margin-bottom: 20px;
 }
 div.newswrap div div p {
+  flex-basis: 90%;
   font-size: 19px;
   margin: 20px 0;
   line-height: 28px;
