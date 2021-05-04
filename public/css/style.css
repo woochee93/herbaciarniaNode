@@ -1486,7 +1486,7 @@ div.news div.item {
   overflow: hidden;
   transition: 0.6s;
   max-height: 0px;
-  border-bottom: 2px solid #00000056;
+  border-bottom: 0;
 }
 div.workshop div.item.active,
 div.news div.item.active {
@@ -1496,6 +1496,7 @@ div.news div.item.active {
   align-items: center;
   justify-content: space-around;
   padding-bottom: 80px;
+  border-bottom: 2px solid #00000056;
 }
 
 div.newswrap div div h2 {
