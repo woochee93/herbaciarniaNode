@@ -1565,7 +1565,6 @@ form.admin p input {
   font-family: "Oswald", sans-serif !important;
   border: 1px solid rgb(0, 37, 0);
   border-radius: 20px 20px;
-  /* margin-left: 30px; */
 }
 form.admin p:nth-of-type(1) input {
   width: 100%;
