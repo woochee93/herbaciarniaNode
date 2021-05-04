@@ -1453,13 +1453,20 @@ div.newswrap div.news {
   color: #023117;
   margin: 0 auto;
   width: 70%;
-  min-height: 150px;
+  min-height: 160px;
+  max-height: 160px;
+}
+
+div.newswrap div.workshop.active,
+div.newswrap div.news.active {
+  max-height: 20000px;
 }
 div.newswrap div h1 {
   padding: 40px 0;
   font-family: "Montserrat", sans-serif;
   font-size: 60px;
-  border-top: 3px solid #023117;
+
+  border-bottom: 3px solid #023117;
   cursor: pointer;
   color: #001f09;
 }

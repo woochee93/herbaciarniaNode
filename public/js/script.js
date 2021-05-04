@@ -78,14 +78,17 @@ dates.forEach((date) => {
 const itemsNews = document.querySelectorAll("div.news div.item");
 const itemsWorkshop = document.querySelectorAll("div.workshop div.item");
 const btnsactivator = [...document.querySelectorAll(".activator")];
-
+const newsWrap = document.querySelector("div.news");
+const workshopWrap = document.querySelector("div.workshop");
 btnsactivator.forEach((button) => {
   button.addEventListener("click", () => {
     if (button.id === "workshop") {
+      workshopWrap.classList.toggle("active");
       itemsWorkshop.forEach((itemWorkshop) => {
         itemWorkshop.classList.toggle("active");
       });
     } else {
+      newsWrap.classList.toggle("active");
       itemsNews.forEach((itemNews) => {
         itemNews.classList.toggle("active");
       });
