@@ -1,13 +1,21 @@
 doctype html
 
-  
+
 html
   head
     include includes/head.pug
+    if path == '/admin'
+      style
+        include ../public/css/admin.css
+    if path == '/login'
+      style
+        include ../public/css/adminLogin.css
   body
     include includes/nav.pug
     block content
     include includes/footer.pug
     include includes/copyright.pug
+    button.scrollToTop
+      i.fas.fa-angle-double-up
+      i.fas.fa-angle-double-up.second
     include includes/scripts.pug
-

@@ -43,7 +43,10 @@ app.use(
     maxAge: config.maxAgeSession,
   })
 );
-
+app.use(function (req, res, next) {
+  res.locals.path = req.path;
+  next();
+});
 app.use("/", indexRouter);
 app.use("/menu", menuRouter);
 app.use("/news", newsRouter);

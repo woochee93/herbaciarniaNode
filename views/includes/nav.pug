@@ -1,3 +1,8 @@
+mixin itemNav(title,url)
+  li.nav-item 
+    a.nav-link(href=url class = path==url? 'active': '')=title
+mixin itemHamburger(title, url, i, target)
+  li
 .hamburger
   ul
     li.main
@@ -44,22 +49,16 @@
         span.navbar-toggler-icon
       #navbarNav.collapse.navbar-collapse
         ul.navbar-nav.ml-auto
-          li.nav-item
-            a.nav-link(href='/') Start
-          li.nav-item
-            a.nav-link(href='/menu') Menu
-          li.nav-item
-            a.nav-link(href='/news') Aktualno&sacute;ci
-          li.nav-item
-            a.nav-link(href='/#services') Oferta
-          li.nav-item
-            a.nav-link(href='/gallery') Galeria
-          li.nav-item
-            a.nav-link(href='/contact') Kontakt
+          +itemNav('Start', '/')
+          +itemNav('Menu', '/menu')
+          +itemNav('Aktualności', '/news')
+          +itemNav('Oferta', '/#services')
+          +itemNav('Galeria', '/gallery')
+          +itemNav('Kontakt', '/contact')
           li.nav-item.socialmedia
             a.nav-link.socialmedia(target='_blank' href='https://www.facebook.com/HerbaciarniaZiolowa')
               i.fab.fa-facebook
           li.nav-item.socialmedia
             a.nav-link.socialmedia(target='_blank' href='https://pl.tripadvisor.com/Restaurant_Review-g1019203-d22834028-Reviews-Herbaciarnia_Ziolowa-Sobotka_Lower_Silesia_Province_Southern_Poland.html?m=19905')
               i.fab.fa-tripadvisor
-        
+

@@ -10,7 +10,7 @@ const scrollTop = () => {
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 800) {
-    btn.style.opacity = 1;
+    btn.style.opacity = 0.8;
     btn.addEventListener("click", scrollTop);
     btn.style.cursor = "pointer";
     btn.style.zIndex = 1;
@@ -27,14 +27,20 @@ window.addEventListener("scroll", () => {
   }
 });
 // --------------------scrollEfect-----------------------
-const items = [
-  ".col-sm-12.passion",
-  ".row.gallery",
-  ".services_section",
-  ".client_section",
-  ".contact_section",
-  ".contact_section_2",
-];
+let items = [];
+if (
+  document.location.pathname == "/" ||
+  document.location.pathname == "/#services"
+) {
+  items = [
+    ".col-sm-12.passion",
+    ".row.gallery",
+    ".services_section",
+    ".client_section",
+    ".contact_section",
+    ".contact_section_2",
+  ];
+}
 
 let ratio = 2;
 if (window.innerHeight > window.innerWidth) {

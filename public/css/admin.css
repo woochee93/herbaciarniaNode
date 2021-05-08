@@ -1,0 +1,134 @@
+/* ///////////////admin */
+h1.admin {
+  margin: 20px 0;
+  font-size: 40px;
+}
+form.admin {
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  flex-grow: 0;
+}
+form.admin p {
+  width: 80%;
+  display: block;
+  margin: 10px;
+}
+form.admin p label {
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+form.admin p input {
+  display: block;
+  font-size: 18px;
+  padding: 5px 15px;
+  font-family: "Oswald", sans-serif !important;
+  border: 1px solid rgb(0, 37, 0);
+  border-radius: 20px 20px;
+}
+form.admin p:nth-of-type(1) input {
+  width: 100%;
+}
+form.admin p textarea {
+  width: 100%;
+  min-height: 300px;
+  font-family: "Oswald", sans-serif !important;
+  resize: none;
+  border-radius: 10px 10px;
+  padding: 5px;
+}
+
+form.admin p:last-of-type input {
+  margin: 20px 0;
+  width: 150px;
+  color: white;
+  background-color: rgb(0, 43, 16);
+  padding: 5px 30px;
+  border: none;
+  font-size: 18px;
+  font-weight: lighter;
+  cursor: pointer;
+}
+form.admin p:last-of-type:hover input {
+  background-color: rgb(0, 75, 28);
+}
+/* ////////////admin nav */
+nav.admin.nav ul {
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0;
+}
+
+nav.admin.nav ul li a {
+  background-color: rgb(0, 43, 16);
+  font-weight: lighter;
+  display: block;
+  padding: 3px 15px;
+  width: 100%;
+  height: 100%;
+  color: rgba(255, 255, 255, 0.678);
+  transition: 0.4s;
+  letter-spacing: 1px;
+}
+nav.admin.nav ul li a:hover {
+  background-color: rgb(0, 75, 28);
+  color: white;
+}
+/* ///////////////////admin index */
+ul.admin.list {
+  margin: 50px 0;
+}
+ul.admin.list li {
+  width: 80%;
+  position: relative;
+  border-bottom: 1px solid black;
+}
+ul.admin.list li p {
+  font-size: 20px;
+  width: 400px;
+}
+ul.admin.list li .buttons {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+ul.admin.list li .buttons a {
+  margin: 0 10px;
+  padding: 10px 20px;
+  color: white;
+  font-size: 16px;
+  font-weight: lighter;
+  border-radius: 5px 5px;
+  background-color: rgb(0, 43, 16);
+}
+ul.admin.list li .buttons a:hover {
+  background-color: rgb(0, 75, 28);
+}
+/* //// admin login */
+input.login {
+  font-size: 18px !important;
+  padding: 5px 15px;
+  font-family: "Oswald", sans-serif !important;
+  display: block;
+  min-width: 200px;
+  border: 1px solid rgb(0, 37, 0);
+  border-radius: 20px 20px;
+  margin: 20px 0;
+}
+input.loginbutton {
+  color: white;
+  background-color: #014916;
+  padding: 5px 30px;
+  border: none;
+  font-size: 18px;
+  font-weight: lighter;
+  cursor: pointer;
+}
+input.loginbutton:hover {
+  background-color: #007924;
+}
