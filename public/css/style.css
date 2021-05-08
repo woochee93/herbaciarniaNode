@@ -40,7 +40,7 @@ html {
 body {
   color: #666666;
   font-size: 14px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins";
   line-height: 1.80857;
   font-weight: normal;
   overflow-x: hidden !important;
@@ -367,7 +367,7 @@ nav img {
 }
 
 .there_text {
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins";
   width: 50%;
   float: left;
   font-size: 17px;
