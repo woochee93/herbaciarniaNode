@@ -198,6 +198,19 @@
   .container.admin {
     padding: 0;
   }
+  div.newswrap {
+    margin-top: 0;
+  }
+  article.news {
+    width: 100%;
+    margin: 0;
+  }
+  article.news p {
+    margin: 0;
+    padding: 40px 10px;
+    font-size: 17px;
+    line-height: unset;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -580,6 +593,16 @@
   .gallery_taital {
     font-size: 40px;
   }
+  article.news {
+    width: 90%;
+    margin: 0 auto;
+  }
+  article.news p {
+    margin: 0;
+    padding: 40px 30px;
+    font-size: 17px;
+    line-height: unset;
+  }
 }
 @media (max-width: 780px) {
   .contact_text.address h1,
@@ -643,6 +666,20 @@
   .contact_text.open_hours,
   .contact_text.address {
     width: 46%;
+  }
+  article.news {
+    width: 80%;
+    margin: 0 auto;
+  }
+  article.news p {
+    margin: 0;
+    padding: 40px 50px;
+    font-size: 17px;
+    line-height: unset;
+  }
+  div.newswrap {
+    width: 90%;
+    margin: 0 auto;
   }
 }
 @media (min-width: 1001px) and (max-width: 1600px) {

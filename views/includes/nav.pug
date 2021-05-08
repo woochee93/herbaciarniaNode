@@ -12,13 +12,13 @@ mixin itemHamburger(title, url, i, target)
         i.fas.fa-home
         span Start
     li
+      a(href='/news')
+        i.far.fa-newspaper
+        span Aktualności
+    li
       a(href='/menu')
         i.fab.fa-envira
         span Menu
-    li
-      a(href='/news')
-        i.far.fa-newspaper
-        span Aktualno&sacute;ci
     li
       a(href='/#services')
         i.fab.fa-buffer
@@ -50,8 +50,8 @@ mixin itemHamburger(title, url, i, target)
       #navbarNav.collapse.navbar-collapse
         ul.navbar-nav.ml-auto
           +itemNav('Start', '/')
-          +itemNav('Menu', '/menu')
           +itemNav('Aktualności', '/news')
+          +itemNav('Menu', '/menu')
           +itemNav('Oferta', '/#services')
           +itemNav('Galeria', '/gallery')
           +itemNav('Kontakt', '/contact')

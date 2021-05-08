@@ -6,7 +6,7 @@
 @import url("https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700");
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
 @import url("https://fonts.googleapis.com/css2?family=Orelega+One&family=Playfair+Display&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap");
 /*****---------------------------------------- 1) font-family: 'Rajdhani', sans-serif;
  2) font-family: 'Poppins', sans-serif;
  ----------------------------------------*****/
@@ -530,7 +530,7 @@ nav img {
 
 .gallery_taital {
   padding: 80px;
-  font-family: "Playfair Display", serif;
+  font-family: "Roboto Slab", serif;
   width: 100%;
   float: left;
   text-align: center;
@@ -1322,7 +1322,7 @@ iframe.facebook {
   color: white;
   font-size: 55px;
   margin-bottom: 50px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .contact_text.address ul li p,
@@ -1427,11 +1427,28 @@ div.hamburger ul li a:hover i + span {
 }
 
 /* /////////////////////////////NEWS */
+article.news {
+  margin: 10px auto;
+  width: 65%;
+  background-color: #042000;
+}
+article.news p {
+  text-align: justify;
+  font-size: 21px;
+  line-height: 37px;
+  color: white;
+  padding: 55px 100px;
+  font-family: "Poppins";
+}
 div.workshop {
   overflow: hidden;
 }
 div.news {
   overflow: hidden;
+}
+.newswrap {
+  opacity: 0;
+  animation: showMenu 0.8s 0.2s both;
 }
 div.newswrap {
   margin-top: 50px;
@@ -1451,7 +1468,9 @@ div.newswrap div.news {
   min-height: 170px;
   max-height: 170px;
 }
-
+div.newswrap div.workshop {
+  margin-bottom: 100px;
+}
 div.newswrap div.workshop.active,
 div.newswrap div.news.active {
   max-height: 20000px;
@@ -1465,9 +1484,10 @@ div.newswrap div h1 {
   color: #001f09;
 }
 div.newswrap div h1:hover {
-  color: #004214;
+  color: #002b0d;
   letter-spacing: 3px;
 }
+
 div.newswrap div i {
   margin: 0 10px 0 auto;
   font-size: 40px;
@@ -1511,7 +1531,8 @@ div.newswrap div div p {
   flex-basis: 90%;
   font-size: 19px;
   margin: 20px 0;
-  line-height: 28px;
+  line-height: 30px;
+  text-align: justify;
 }
 div.newswrap div div img + p {
   flex-basis: 40%;

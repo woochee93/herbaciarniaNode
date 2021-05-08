@@ -1,27 +1,30 @@
 extends layout
-   
+
 block content
-    .newswrap
-      .news
-        h1(class='activator' id='news') Wydarzenia
-        i.fas.fa-chevron-circle-down.activator(id='news')
-        each item in datas.item2
-          .item
-             h2=item.title
-             h3(class='date')=item.created
-             if item.image
-              img(src=item.image class='news')
-             p=item.description
-      .workshop
-        h1(class='activator' id='workshop') Warsztaty
-        i.fas.fa-chevron-circle-down.activator(id='workshop')
-        each item in datas.item1
-          .item
-             h2=item.title
-             h3(class='date')=item.created
-             if item.image
-              img(src=item.image class='workshop')
-             p=item.description
-             
-        
-        
+  .newswrap
+    article.news
+
+      p Herbaciarnia Ziołowa to nie tylko miejsce gdzie wypijesz pyszną herbatę i zjesz słodkości, pragniemy, by była kojarzona równie mocno z działaniami artystycznymi, które Wam zaproponujemy! Wierzymy, że sztuka łączy ludzi i łagodzi obyczaje! Chcemy organizować dla Was wystawy artystyczne, wernisaże, kameralne spotkania z poezją i muzyką, oraz przeróżne warsztaty rękodzielnicze!
+    .news
+      h1(class='activator' id='news' ) Aktualności
+      i.fas.fa-chevron-circle-down.activator(id='news')
+      each item in datas.item2
+        .item
+          h2=item.title
+          h3(class='date')=item.created
+          if item.image
+            img(src=item.image class='news')
+          p=item.description
+    .workshop
+      h1(class='activator' id='workshop') Warsztaty
+      i.fas.fa-chevron-circle-down.activator(id='workshop')
+      each item in datas.item1
+        .item
+          h2=item.title
+          h3(class='date')=item.created
+          if item.image
+            img(src=item.image class='workshop')
+          p=item.description
+
+
+
