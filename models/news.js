@@ -11,6 +11,7 @@ var newsSchema = new Schema({
   image: {
     type: String,
   },
+  facebook: { type: String },
 });
 
 module.exports = mongoose.model("News", newsSchema);

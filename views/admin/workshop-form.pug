@@ -1,28 +1,33 @@
 extends ../layout
 
 block content
-  div(class='container admin')
-    include ./nav.pug
-    h1(class='admin')=title
-    if errors!==undefined 
-        each message in errors.errors 
-            p=message
-    form(method='post' class='admin' enctype="multipart/form-data")
-        p 
-            label Nazwa
-            input(type="text" name='title')
-        p 
-            label Start 
-            input( type="datetime-local" name="start")   
-        p 
-            label Koniec 
-            input( type="datetime-local" name="end") 
-        p 
-            label Zdjęcie 
-            img#blah(src='/images/instagram-icon.png' style='max-height:200px; margin: 20px; display:none;')
-            input(type="file" name='image' id="imgInp")
-        p 
-            label Opis 
-            textarea(name="description") 
-        p 
-            input(type="submit" value='Zapisz')
+    style
+        include ../../public/css/admin.css
+    div(class='container admin')
+        include ./nav.pug
+        h1(class='admin')=title
+        if errors!==undefined 
+            each message in errors.errors 
+                p=message
+        form(method='post' class='admin' enctype="multipart/form-data")
+            p 
+                label Nazwa
+                input(type="text" name='title')
+            p 
+                label Start 
+                input( type="datetime-local" name="start")   
+            p 
+                label Koniec 
+                input( type="datetime-local" name="end") 
+            p 
+                label Facebook 
+                input(type="text" class='facebook' name='facebook')
+            p
+                label Zdjęcie 
+                img#blah(src='/images/instagram-icon.png' style='max-height:200px; margin: 20px; display:none;')
+                input(type="file" name='image' id="imgInp")
+            p 
+                label Opis 
+                textarea(name="description") 
+            p 
+                input(type="submit" value='Zapisz')

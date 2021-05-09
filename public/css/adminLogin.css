@@ -2,7 +2,7 @@
 input.login {
   font-size: 18px !important;
   padding: 5px 15px;
-  font-family: "Oswald", sans-serif !important;
+  font-family: "Poppins", sans-serif !important;
   display: block;
   min-width: 200px;
   border: 1px solid rgb(0, 37, 0);
@@ -11,13 +11,14 @@ input.login {
 }
 input.loginbutton {
   color: white;
-  background-color: #014916;
+  background-color: #001a08;
   padding: 5px 30px;
   border: none;
   font-size: 18px;
-  font-weight: lighter;
+  font-weight: normal;
   cursor: pointer;
+  border-radius: 0 20px;
 }
 input.loginbutton:hover {
-  background-color: #007924;
+  background-color: #003d12;
 }

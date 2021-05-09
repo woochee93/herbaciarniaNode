@@ -1,26 +1,31 @@
 extends ../layout
 
 block content
-  div(class='container admin')
-    include ./nav.pug
-    h1( class='admin')=title
-    form(method='post' class='admin' enctype="multipart/form-data")
-        p 
-            label Tytuł 
-            input(type="text" name='title' value=news.title)
-        p 
-            label Data 
-            input(type="date" name='created' value=dateNews)
-        p 
-            if news.image
-                label Zmień zdjęcie
-                img#blah(src=news.image style='max-height:200px; margin: 20px; display:block;')
-            else
-                label Dodaj zdjęcie
-                img#blah(src=news.image style='max-height:200px; margin: 20px; display:none;')
-            input(type="file" name='image' id="imgInp")
-        p 
-            label Opis 
-            textarea(name="description")=news.description
-        p 
-            input(type="submit" value='Zapisz')
+    style
+        include ../../public/css/admin.css
+    div(class='container admin')
+        include ./nav.pug
+        h1( class='admin')=title
+        form(method='post' class='admin' enctype="multipart/form-data")
+            p 
+                label Tytuł 
+                input(type="text" name='title' value=news.title)
+            p 
+                label Data 
+                input(type="date" name='created' value=dateNews)
+            p 
+                label Facebook 
+                input(type="text" name='facebook' class='facebook' value=news.facebook)
+            p 
+                if news.image
+                    label Zmień zdjęcie
+                    img#blah(src=news.image style='max-height:200px; margin: 20px; display:block;')
+                else
+                    label Dodaj zdjęcie
+                    img#blah(src=news.image style='max-height:200px; margin: 20px; display:none;')
+                input(type="file" name='image' id="imgInp")
+            p 
+                label Opis 
+                textarea(name="description")=news.description
+            p 
+                input(type="submit" value='Zapisz')

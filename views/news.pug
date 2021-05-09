@@ -12,6 +12,12 @@ block content
         .item
           h2=item.title
           h3(class='date')=item.created
+          if item.facebook 
+            h3
+              a(href=item.facebook target='_blank')
+                i.fab.fa-facebook
+                |  Facebook
+
           if item.image
             img(src=item.image class='news')
           p=item.description
@@ -22,6 +28,11 @@ block content
         .item
           h2=item.title
           h3(class='date')=item.created
+          if item.facebook 
+            h3
+              a(href=item.facebook target='_blank')
+                i.fab.fa-facebook
+                |  Facebook
           if item.image
             img(src=item.image class='workshop')
           p=item.description

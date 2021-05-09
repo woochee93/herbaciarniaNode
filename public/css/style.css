@@ -405,6 +405,7 @@ nav img {
   left: 0px;
   right: -60px;
   top: 340px;
+  border-radius: 5px 0;
 }
 
 #main_slider a.carousel-control-prev {
@@ -415,16 +416,18 @@ nav img {
 
 #main_slider .carousel-control-next,
 #main_slider .carousel-control-prev {
+  border-radius: 0 5px;
   width: 35px;
   height: 35px;
   background: #fff;
   opacity: 1;
   font-size: 30px;
-  color: #333333;
+  color: black;
   margin: 0 auto;
   z-index: 1;
   margin: 0 auto;
   text-align: center;
+  transition: 0.3;
 }
 
 #main_slider .carousel-control-next:focus,
@@ -1485,12 +1488,13 @@ div.newswrap div h1.active:hover {
   color: white;
   background-color: #062c00;
 }
-div.newswrap div i {
+div.newswrap div i.fas.fa-chevron-circle-down {
   margin: 0 10px 0 auto;
-  font-size: 50px;
+  font-size: 35px;
   position: absolute;
-  top: 50px;
+  top: 50%;
   right: 20px;
+  transform: scaleY(1) translateY(-50%);
 }
 div.workshop div.item,
 div.news div.item {
@@ -1522,7 +1526,19 @@ div.newswrap div div h3 {
   font-size: 13px;
   color: rgb(133, 133, 133);
   flex-basis: 100%;
+  padding: 0;
+}
+div.newswrap div div h3 a {
+  font-size: 13px;
+  color: rgb(133, 133, 133);
+  flex-basis: 100%;
   margin-bottom: 20px;
+}
+div.newswrap div div h3 a i {
+  font-size: 13px;
+}
+div.newswrap div div a:hover {
+  color: black;
 }
 div.newswrap div div p {
   flex-basis: 90%;
@@ -1540,11 +1556,12 @@ div.newswrap div img {
   display: block;
   width: 400px;
   max-height: 100%;
+  margin-top: 20px;
 }
 .fas.fa-chevron-circle-down {
   cursor: pointer;
   transition: 0.3s;
 }
 .fas.fa-chevron-circle-down.active {
-  transform: scaleY(-1);
+  transform: scaleY(-1) translateY(50%) !important;
 }

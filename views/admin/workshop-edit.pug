@@ -1,29 +1,34 @@
 extends ../layout
 
 block content
-  div(class='container admin')
-    include ./nav.pug
-    h1(class='admin')=title
-    form(method='post' class='admin' enctype="multipart/form-data")
-        p 
-            label Nazwa
-            input(type="text" name='title' value=workshop.title)
-        p 
-            label Start 
-            input( type="datetime-local" name="start" value=startWorkshop?startWorkshop:'')   
-        p 
-            label Koniec 
-            input( type="datetime-local" name="end" value=endWorkshop?endWorkshop:'') 
-        p
-            if workshop.image
-                label Zmień zdjęcie
-                img#blah(src=workshop.image style='max-height:200px; margin: 20px; display:block;')
-            else
-                label Dodaj zdjęcie
-                img#blah(src='#' style='max-height:200px; margin: 20px; display:none;')
-            input(type="file" name='image' id="imgInp")
-        p 
-            label Opis 
-            textarea(name="description")=workshop.description
-        p 
-            input(type="submit" value='Zapisz')
+    style
+        include ../../public/css/admin.css
+    div(class='container admin')
+        include ./nav.pug
+        h1(class='admin')=title
+        form(method='post' class='admin' enctype="multipart/form-data")
+            p 
+                label Nazwa
+                input(type="text" name='title' value=workshop.title)
+            p 
+                label Facebook 
+                input(type="text" name='facebook' class='facebook' value=workshop.facebook)
+            p 
+                label Start 
+                input( type="datetime-local" name="start" value=startWorkshop?startWorkshop:'')   
+            p 
+                label Koniec 
+                input( type="datetime-local" name="end" value=endWorkshop?endWorkshop:'') 
+            p
+                if workshop.image
+                    label Zmień zdjęcie
+                    img#blah(src=workshop.image style='max-height:200px; margin: 20px; display:block;')
+                else
+                    label Dodaj zdjęcie
+                    img#blah(src='#' style='max-height:200px; margin: 20px; display:none;')
+                input(type="file" name='image' id="imgInp")
+            p 
+                label Opis 
+                textarea(name="description")=workshop.description
+            p 
+                input(type="submit" value='Zapisz')
