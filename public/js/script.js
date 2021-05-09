@@ -88,6 +88,13 @@ const newsWrap = document.querySelector("div.news");
 const workshopWrap = document.querySelector("div.workshop");
 btnsactivator.forEach((button) => {
   button.addEventListener("click", () => {
+    if (!button.classList.contains("active")) {
+      const srollToActive = () => {
+        const topDistance = $(button).offset().top;
+        window.scrollTo(0, topDistance);
+      };
+      window.setTimeout(srollToActive, 100); // wait to items height
+    }
     if (button.id === "workshop") {
       workshopWrap.classList.toggle("active");
       itemsWorkshop.forEach((itemWorkshop) => {
@@ -108,9 +115,9 @@ btnsactivator.forEach((button) => {
   });
 });
 
-/////////prompt admin
-const promptLinks = document.querySelectorAll("a.prompt");
-promptLinks.forEach((link) => {
+/////////confirm delete db admin
+const confirmLinks = document.querySelectorAll("a.prompt");
+confirmLinks.forEach((link) => {
   link.addEventListener("click", () => {
     confirm("Na pewno chcesz usunąć?");
   });

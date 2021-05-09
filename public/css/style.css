@@ -63,7 +63,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Oswald", sans-serif;
+  font-family: "Poppins", sans-serif;
   letter-spacing: 0;
   font-weight: normal;
   position: relative;
@@ -180,6 +180,7 @@ div.gallery a {
 div.gallery img {
   object-fit: cover;
   max-width: 350px;
+  border-radius: 0;
 }
 
 :focus {
@@ -328,8 +329,9 @@ nav img {
   width: 50%;
 }
 .banner_section .logo2 {
-  background-color: #00000036;
+  background-color: #00000046;
   border: 5px solid white;
+  border-radius: 0 40px;
   width: 470px;
   padding: 40px 30px;
   position: absolute;
@@ -345,13 +347,12 @@ nav img {
   padding: 100px 0px;
 }
 .banner_taital h1.coffee_text {
-  font-family: "Roboto Slab", serif;
-  /* font-family: "Playfair Display", serif; */
+  font-family: "Poppins", serif;
 }
 .outstanding_text {
   width: 100%;
   float: left;
-  font-size: 30px;
+  font-size: 20px;
   color: rgba(255, 255, 255, 0.664);
   padding-bottom: 0px;
 }
@@ -361,7 +362,7 @@ nav img {
   font-family: "Merriweather", sans-serif;
   width: 100%;
   float: left;
-  font-size: 64px;
+  font-size: 56px;
   color: #fdfcfa;
   padding-bottom: 0px;
 }
@@ -370,7 +371,7 @@ nav img {
   font-family: "Poppins";
   width: 50%;
   float: left;
-  font-size: 17px;
+  font-size: 16px;
   color: #fff;
   margin: 0px;
   padding-bottom: 30px;
@@ -446,7 +447,6 @@ nav img {
 .about_taital_main {
   width: 100%;
   float: left;
-  padding: 50px 0px;
 }
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap");
 .about_taital {
@@ -660,10 +660,11 @@ a:hover {
   text-align: center;
 }
 h1.services_taital {
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  font-family: "Roboto Slab", serif;
-  font-size: 80px;
+  /* text-transform: uppercase; */
+  font-weight: 600;
+  letter-spacing: 7px;
+  font-family: "Poppins", serif;
+  font-size: 90px;
   letter-spacing: 7px;
   margin-bottom: 40px;
 }
@@ -730,6 +731,7 @@ img.menu {
   padding: 40px 30px;
   box-shadow: 0px 0px 18px -6px;
   overflow: hidden;
+  border-radius: 0 40px;
 }
 
 .box_main:hover .decorate_text {
@@ -770,7 +772,7 @@ img.menu {
   font-size: 14px;
   color: #ffffff;
   margin: 0px;
-  text-align: center;
+  text-align: justify;
 }
 
 .readmore_bt {
@@ -897,22 +899,6 @@ h3.decorate_text {
   color: #252525;
   margin-top: 20px;
 }
-
-/* .carousel-indicators li {
-  position: relative;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  width: 55px;
-  height: 18px;
-  margin-right: 3px;
-  margin-left: 3px;
-  text-indent: -999px;
-  background-color: #252525;
-  border-radius: 20px;
-}
-.carousel-indicators .active {
-  background-color: #004214;
-} */
 .carousel-indicators li {
   position: relative;
   -ms-flex: 0 1 auto;
@@ -963,13 +949,13 @@ h3.decorate_text {
 }
 .email_text form h1 {
   color: white;
-  font-weight: 300;
+  font-weight: 400;
 }
 .email_text form input,
 .email_text form textarea {
   font-size: 18px !important;
   padding: 5px 15px;
-  font-family: "Oswald", sans-serif !important;
+  font-family: "Poppins", sans-serif !important;
   display: block;
   min-width: 300px;
   width: 50%;
@@ -979,21 +965,25 @@ h3.decorate_text {
 }
 .email_text form input {
   line-height: 30px;
+  border-radius: 0 10px;
 }
 .email_text form textarea {
   resize: none;
   flex-grow: 1;
+  border-radius: 0 20px;
 }
 .email_text form button {
   color: white;
-  background-color: #014916;
+  /* background-color: #014916; */
+  background-color: rgb(0, 34, 10);
   padding: 5px 30px;
   border: none;
-  /* border-radius: 10px 10px; */
   font-size: 22px;
+  border-radius: 0 20px;
 }
 .email_text form button:hover {
-  background-color: rgb(0, 34, 10);
+  /* background-color: rgb(0, 34, 10); */
+  background-color: #014916;
 }
 .contact_section {
   width: 100%;
@@ -1109,7 +1099,7 @@ h3.decorate_text {
 .footer_section {
   width: 100%;
   float: left;
-  background-color: #042000;
+  background-color: #021400;
   height: auto;
   padding: 80px 0px;
 }
@@ -1431,21 +1421,17 @@ article.news {
   margin: 10px auto;
   width: 65%;
   background-color: #042000;
+  border-radius: 5px 30px;
 }
 article.news p {
-  text-align: justify;
+  text-align: left;
   font-size: 21px;
   line-height: 37px;
   color: white;
   padding: 55px 100px;
   font-family: "Poppins";
 }
-div.workshop {
-  overflow: hidden;
-}
-div.news {
-  overflow: hidden;
-}
+
 .newswrap {
   opacity: 0;
   animation: showMenu 0.8s 0.2s both;
@@ -1463,8 +1449,8 @@ div.newswrap div.news {
   top: 0;
   left: 0;
   color: #023117;
-  margin: 0 auto;
-  width: 70%;
+  margin: 20px auto;
+  width: 65%;
   min-height: 170px;
   max-height: 170px;
 }
@@ -1476,24 +1462,35 @@ div.newswrap div.news.active {
   max-height: 20000px;
 }
 div.newswrap div h1 {
-  padding: 40px 0;
+  padding: 30px 40px;
   font-family: "Montserrat", sans-serif;
-  font-size: 70px;
+  font-size: 60px;
   border-bottom: 3px solid #023117;
   cursor: pointer;
-  color: #001f09;
+  color: rgba(255, 255, 255, 0.644);
+  background-color: #042000;
+  border-radius: 5px 30px;
 }
 div.newswrap div h1:hover {
-  color: #002b0d;
-  letter-spacing: 3px;
+  color: white;
+  transform: translateX(20px);
+  background-color: #062c00;
 }
-
+div.newswrap div h1.active {
+  color: rgba(255, 255, 255, 0.9);
+  transform: translateX(20px);
+  background-color: #042000;
+}
+div.newswrap div h1.active:hover {
+  color: white;
+  background-color: #062c00;
+}
 div.newswrap div i {
   margin: 0 10px 0 auto;
-  font-size: 40px;
+  font-size: 50px;
   position: absolute;
   top: 50px;
-  right: 0;
+  right: 20px;
 }
 div.workshop div.item,
 div.news div.item {

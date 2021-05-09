@@ -172,6 +172,12 @@
   div.newswrap div h1 {
     font-size: 35px;
   }
+  div.newswrap div h1:hover {
+    transform: translateX(0);
+  }
+  div.newswrap div h1.active {
+    transform: translateX(0);
+  }
   div.newswrap div i {
     margin: 0;
     right: 10px;
@@ -204,6 +210,7 @@
   article.news {
     width: 100%;
     margin: 0;
+    border-radius: 0;
   }
   article.news p {
     margin: 0;
@@ -596,6 +603,7 @@
   article.news {
     width: 90%;
     margin: 0 auto;
+    border-radius: 0;
   }
   article.news p {
     margin: 0;

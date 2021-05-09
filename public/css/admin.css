@@ -66,7 +66,6 @@ nav.admin.nav ul {
 
 nav.admin.nav ul li a {
   background-color: rgb(0, 43, 16);
-  font-weight: lighter;
   display: block;
   padding: 3px 15px;
   width: 100%;
@@ -102,7 +101,6 @@ ul.admin.list li .buttons a {
   padding: 10px 20px;
   color: white;
   font-size: 16px;
-  font-weight: lighter;
   border-radius: 5px 5px;
   background-color: rgb(0, 43, 16);
 }

@@ -7,7 +7,7 @@ block content
       p Herbaciarnia Ziołowa to nie tylko miejsce gdzie wypijesz pyszną herbatę i zjesz słodkości, pragniemy, by była kojarzona równie mocno z działaniami artystycznymi, które Wam zaproponujemy! Wierzymy, że sztuka łączy ludzi i łagodzi obyczaje! Chcemy organizować dla Was wystawy artystyczne, wernisaże, kameralne spotkania z poezją i muzyką, oraz przeróżne warsztaty rękodzielnicze!
     .news
       h1(class='activator' id='news' ) Aktualności
-      i.fas.fa-chevron-circle-down.activator(id='news')
+        i.fas.fa-chevron-circle-down.activator(id='news')
       each item in datas.item2
         .item
           h2=item.title
@@ -17,7 +17,7 @@ block content
           p=item.description
     .workshop
       h1(class='activator' id='workshop') Warsztaty
-      i.fas.fa-chevron-circle-down.activator(id='workshop')
+        i.fas.fa-chevron-circle-down.activator(id='workshop')
       each item in datas.item1
         .item
           h2=item.title
