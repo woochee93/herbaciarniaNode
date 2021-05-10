@@ -991,10 +991,12 @@ h3.decorate_text {
 .contact_section {
   width: 100%;
   float: left;
+}
+.contact_section.index {
   opacity: 0;
   transform: translateY(20%);
 }
-.contact_section.active {
+.contact_section.index.active {
   opacity: 1;
   transform: translateY(0%);
 }
@@ -1007,14 +1009,25 @@ h3.decorate_text {
   color: #004214;
   font-weight: bold;
 }
+.contact_section.layout_padding {
+  padding-top: 0;
+}
+.contact_section_2.layout_padding {
+  padding-top: 0;
+}
 
+.contact_section.layout_padding.index {
+  padding-top: 110px;
+}
 .contact_section_2 {
   width: 100%;
   float: left;
+}
+.contact_section_2.index {
   opacity: 0;
   transform: translateY(20%);
 }
-.contact_section_2.layout_padding.active {
+.contact_section_2.index.layout_padding.active {
   opacity: 1;
   transform: translateY(0%);
 }
@@ -1317,15 +1330,21 @@ iframe.facebook {
   margin-bottom: 50px;
   font-weight: 400;
 }
-
-.contact_text.address ul li p,
+.contact_text.address ul {
+  margin: 0 auto;
+  max-width: 450px;
+}
+.contact_text.address ul li a,
 .contact_text.open_hours ul li p {
   display: block;
   color: white;
   font-size: 23px;
   font-weight: 300;
+  text-align: left;
 }
-.contact_text.open_hours ul li {
+.contact_text.address ul li a:hover,
+.contact_text.open_hours ul li a:hover {
+  color: #a87402;
 }
 .contact_text.open_hours ul li p {
   width: 150px;

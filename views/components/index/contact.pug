@@ -1,14 +1,15 @@
-.contact_section.layout_padding
+.contact_section.layout_padding(class=path!=='/contact'?'index':'')
   .container.contact_section
     .contact_text.address
       h1.contact_text Skontaktuj się z nami!
       ul
         li
-          p ul. &Sacute;wi&eogon;tego Jakuba 26, 55-050 Sob&oacute;tka
+          a(href='https://g.page/HerbaciarniaZiolowa?share' target='_blank')
+            |ul. Świętego Jakuba 26, 55-050 Sob&oacute;tka
         li
-          p Telefon : +48 536 743 666
+          a(href='tel:+48536743666') Telefon : +48 536 743 666
         li
-          p
+          a(href='mailto:ziolowa.herbaciarnia@gmail.com')
             | Email :
             | ziolowa.herbaciarnia@gmail.com
     .contact_text.open_hours
@@ -35,7 +36,7 @@
         li
           p niedziela 
           p 12:00 - 19:00
-.contact_section_2.layout_padding
+.contact_section_2.layout_padding(class=path!=='/contact'?'index':'')
   .container-fluid
     .row
       .col-md-6.padding_0

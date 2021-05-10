@@ -626,7 +626,7 @@
     width: 100%;
   }
 
-  .contact_text.address ul li p,
+  .contact_text.address ul li a,
   .contact_text.open_hours ul li p {
     color: white;
     font-size: 16px;
