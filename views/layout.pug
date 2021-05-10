@@ -3,7 +3,7 @@ doctype html
 
 html
   head
-    include includes/head.pug
+    include components/head.pug
     if path == '/admin'
       style
         include ../public/css/admin.css
@@ -11,11 +11,11 @@ html
       style
         include ../public/css/adminLogin.css
   body
-    include includes/nav.pug
+    include components/nav.pug
     block content
-    include includes/footer.pug
-    include includes/copyright.pug
+    include components/footer.pug
+    include components/copyright.pug
     button.scrollToTop
       i.fas.fa-angle-double-up
       i.fas.fa-angle-double-up.second
-    include includes/scripts.pug
+    include components/scripts.pug

@@ -1,0 +1,15 @@
+doctype html
+
+
+html
+  head
+    include headAdmin.pug
+  body
+    include ../components/nav.pug
+    block content
+    include ../components/footer.pug
+    include ../components/copyright.pug
+    button.scrollToTop
+      i.fas.fa-angle-double-up
+      i.fas.fa-angle-double-up.second
+    include ../components/scripts.pug
