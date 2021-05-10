@@ -35,7 +35,6 @@ if (
   items = [
     ".col-sm-12.passion",
     ".row.gallery",
-    ".services_section",
     ".client_section",
     ".contact_section",
     ".contact_section_2",
