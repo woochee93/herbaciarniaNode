@@ -1546,6 +1546,7 @@ div.newswrap div div h3 {
   padding: 0;
 }
 div.newswrap div div h3 a {
+  margin-left: 10px;
   font-size: 13px;
   color: rgb(133, 133, 133);
   flex-basis: 100%;
@@ -1571,7 +1572,7 @@ div.newswrap div div img + p {
 div.newswrap div img {
   flex-basis: 30%;
   display: block;
-  width: 400px;
+  width: 350px;
   max-height: 100%;
   margin-top: 20px;
 }

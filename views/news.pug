@@ -11,9 +11,9 @@ block content
       each item in datas.item2
         .item
           h2=item.title
-          h3(class='date')=item.created
-          if item.facebook 
-            h3
+          h3(class='date')
+            span=item.created
+            if item.facebook 
               a(href=item.facebook target='_blank')
                 i.fab.fa-facebook
                 |  Facebook
@@ -27,9 +27,9 @@ block content
       each item in datas.item1
         .item
           h2=item.title
-          h3(class='date')=item.created
-          if item.facebook 
-            h3
+          h3(class='date')
+            span=item.created
+            if item.facebook 
               a(href=item.facebook target='_blank')
                 i.fab.fa-facebook
                 |  Facebook
