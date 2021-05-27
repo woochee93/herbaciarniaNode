@@ -609,7 +609,9 @@
 @media (orientation: portrait) {
   img.menu {
     object-fit: cover;
-    max-width: 100%;
+    max-width: 95%;
+    max-height: 90%;
+    margin: 20px 0;
   }
 }
 @media (min-width: 600px) and (max-width: 780px) {

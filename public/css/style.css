@@ -676,10 +676,13 @@ div.menu {
   text-align: center;
 }
 img.menu {
+  margin: 50px;
   object-fit: cover;
-  max-height: 90vh;
+  max-height: 75vh;
   max-width: 100%;
   opacity: 0;
+  -webkit-box-shadow: 5px 5px 14px -6px #000000;
+  box-shadow: 5px 5px 14px -6px #000000;
   animation: showMenu 0.8s 0.2s both;
 }
 .services_text {
