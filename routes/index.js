@@ -13,7 +13,6 @@ router.get("/", function (req, res, next) {
     doc.forEach((article, index) => {
       datas[index].created = article.created.toISOString().slice(0, 10);
     });
-    console.log(datas);
     res.render("index", { title: "Start - Herbaciarnia Ziołowa", datas });
   });
 });
