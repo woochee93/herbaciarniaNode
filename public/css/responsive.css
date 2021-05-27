@@ -278,10 +278,10 @@
   }
 
   .outstanding_text {
-    font-size: 50px;
+    font-size: 20px;
   }
   .coffee_text {
-    font-size: 60px;
+    font-size: 30px;
   }
   .there_text {
     width: 60%;
@@ -453,10 +453,10 @@
     background-position: center;
   }
   .outstanding_text {
-    font-size: 30px;
+    font-size: 20px;
   }
   .coffee_text {
-    font-size: 30px;
+    font-size: 27px;
   }
   .there_text {
     width: 100%;
@@ -526,23 +526,21 @@
     width: 100%;
   }
   .banner_taital {
-    padding: 0;
+    padding: 80px 0;
   }
 }
 @media (min-width: 900px) and (max-width: 1399px) {
   .banner_section .logo2 {
-    width: 300px;
+    width: 350px;
     top: 30%;
-    right: 10px;
+    right: 80px;
     transform: translateY(0%);
   }
 }
 @media (min-width: 1400px) and (max-width: 1600px) {
   .banner_section .logo2 {
     width: 400px;
-    /* top: 50%; */
     right: 100px;
-    /* transform: translateY(-50%); */
   }
 }
 @media (max-width: 900px) {
@@ -588,7 +586,7 @@
     font-size: 28px;
   }
   .layout_padding {
-    padding-top: 40px;
+    padding-top: 60px;
   }
   div.hamburger {
     display: none;

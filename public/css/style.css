@@ -326,15 +326,15 @@ nav img {
   width: 50%;
 }
 .banner_section .logo2 {
-  background-color: #00000046;
-  border: 5px solid white;
-  border-radius: 0 40px;
-  width: 470px;
-  padding: 40px 30px;
+  background-color: #010700a2;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 0 55px;
+  width: 550px;
+  padding: 60px 50px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 180px;
+  right: 200px;
 }
 
 .banner_taital {
