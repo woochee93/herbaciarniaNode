@@ -72,12 +72,19 @@ btnHamburger.addEventListener("click", () => {
   listHamburger2.classList.toggle("active");
 });
 // news date changer to pl format
-const dates = document.querySelectorAll("h3.date span");
+let dates = document.querySelectorAll("h3.date span");
+let datesBanner = document.querySelectorAll("h1.outstanding_text");
 dates.forEach((date) => {
   let localDate = new Date(date.innerHTML).toLocaleDateString();
   if (localDate[1] == ".") localDate = 0 + localDate;
-
   date.innerHTML = localDate;
+});
+datesBanner.forEach((date, index) => {
+  if (index) {
+    let localDate = new Date(date.innerHTML).toLocaleDateString();
+    if (localDate[1] == ".") localDate = 0 + localDate;
+    date.innerHTML = localDate;
+  }
 });
 ////////////////show workshop and news
 const itemsNews = document.querySelectorAll("div.news div.item");

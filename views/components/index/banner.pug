@@ -1,43 +1,23 @@
+mixin bannerArticle(title,date,text,btn,active)
+    .carousel-item(class=active?'active':null)
+          .row
+            .col-sm-12
+              .banner_taital
+                h1.outstanding_text=date
+                h1.coffee_text=title
+                p.there_text=text
+                    if btn
+                        .learnmore_bt
+                            a(href=`./news/${btn}` target="_blank") Więcej
 .banner_section.layout_padding
   img.logo2(src='images/logoTransparent.png' alt='')
   .container
     #main_slider.carousel.slide(data-ride='carousel')
       .carousel-inner
-        .carousel-item.active
-          .row
-            .col-sm-12
-              .banner_taital
-                h1.outstanding_text Sob&oacute;tka
-                h1.coffee_text Herbaciarnia zio&lstrok;owa
-                p.there_text
-                  | Nowe wyj&aogon;tkowe miejsce w centrum Sob&oacute;tki, du&zdot;y wyb&oacute;r
-                  | pysznych herbat, sklep z r&eogon;kodzie&lstrok;em i prezentami, miejsce
-                  | spotka&nacute; i wydarze&nacute; kulturalnych.
-                // <div class="learnmore_bt"><a href="#">Więcej</a></div>
-        .carousel-item
-          .row
-            .col-sm-12
-              .banner_taital
-                h1.outstanding_text 13.04.2021r.
-                h1.coffee_text Spacer to idealny pomys&lstrok;...
-                p.there_text
-                  | a po drodze zapraszamy do nas po herbat&eogon; i kaw&eogon;! &#x2600;&#xFE0F; W tym
-                  | trudnym czasie odwiedzajcie nas a my odwdzi&eogon;czymy si&eogon; tym
-                  | co mamy najlepsze!
-                //
-                  <div class="learnmore_bt">
-                  <a href="#">więcej</a>
-                  </div>
-        .carousel-item
-          .row
-            .col-sm-12
-              .banner_taital
-                h1.outstanding_text Przerwa &sacute;wi&aogon;teczna
-                h1.coffee_text Przerwa &sacute;wi&aogon;teczna
-                p.there_text
-                  | Od dzi&sacute; mamy ju&zdot; zamkni&eogon;te, robimy przerw&eogon; &sacute;wi&aogon;teczn&aogon; i
-                  | zapraszamy ju&zdot; we wtorek - 6.04.2021! Weso&lstrok;ych &Sacute;wi&aogon;t
-                // <div class="learnmore_bt"><a href="#">więcej</a></div>
+        +bannerArticle('Herbaciarnia ziołowa','Sobótka','Nowe wyjątkowe miejsce w centrum Sobótki, duży wybór pysznych herbat, sklep z rękodziełem i prezentami, miejsce spotkań i wydarzeń kulturalnych.', false, true)
+        each item in datas
+          +bannerArticle(item.title, item.created, item.description.split(' ').slice(0,20).join(' ')+'...', item._id)
+
       a.carousel-control-prev(href='#main_slider' role='button' data-slide='prev')
         i.fa.fa-angle-left
       a.carousel-control-next(href='#main_slider' role='button' data-slide='next')

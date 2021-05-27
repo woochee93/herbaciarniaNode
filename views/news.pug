@@ -2,13 +2,28 @@ extends layout
 
 block content
   .newswrap
-    article.news
+    if clickedArticle
+      .clickedArticle
+            h2=clickedArticle.title
+            h3(class='date')
+              span=clickedArticle.created
+              if clickedArticle.facebook 
+                a(href=clickedArticle.facebook target='_blank')
+                  i.fab.fa-facebook
+                  |  Facebook
 
-      p Herbaciarnia Ziołowa to nie tylko miejsce gdzie wypijesz pyszną herbatę i zjesz słodkości, pragniemy, by była kojarzona równie mocno z działaniami artystycznymi, które Wam zaproponujemy! Wierzymy, że sztuka łączy ludzi i łagodzi obyczaje! Chcemy organizować dla Was wystawy artystyczne, wernisaże, kameralne spotkania z poezją i muzyką, oraz przeróżne warsztaty rękodzielnicze!
+            if clickedArticle.image
+              img(src=clickedArticle.image class='news')
+            p=clickedArticle.description
+
+    article.news
+      if !clickedArticle
+        p Herbaciarnia Ziołowa to nie tylko miejsce gdzie wypijesz pyszną herbatę i zjesz słodkości, pragniemy, by była kojarzona równie mocno z działaniami artystycznymi, które Wam zaproponujemy! Wierzymy, że sztuka łączy ludzi i łagodzi obyczaje! Chcemy organizować dla Was wystawy artystyczne, wernisaże, kameralne spotkania z poezją i muzyką, oraz przeróżne warsztaty rękodzielnicze!
     .news
       h1(class='activator' id='news' ) Aktualności
         i.fas.fa-chevron-circle-down.activator(id='news')
       each item in datas.item2
+       if item.title!==clickedArticle.title
         .item
           h2=item.title
           h3(class='date')

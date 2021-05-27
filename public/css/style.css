@@ -316,13 +316,10 @@ nav img {
   background-image: url(../images/bannersample.jpg);
   background-position: center;
   background-size: cover;
-
-  /* height: 470px; */
-  background-size: 100%;
   padding: 10px 0px 25px 0px;
   background-repeat: no-repeat;
   position: relative;
-  min-height: 500px;
+  min-height: 550px;
 }
 .banner_section .container {
   margin-left: 10%;
@@ -362,7 +359,7 @@ nav img {
   font-family: "Merriweather", sans-serif;
   width: 100%;
   float: left;
-  font-size: 56px;
+  font-size: 45px;
   color: #fdfcfa;
   padding-bottom: 0px;
 }
@@ -375,7 +372,6 @@ nav img {
   color: #fff;
   margin: 0px;
   padding-bottom: 30px;
-  height: 130px;
 }
 
 .learnmore_bt {
@@ -383,16 +379,14 @@ nav img {
 }
 
 .learnmore_bt a {
+  font-family: "Montserrat";
   width: 100%;
-  float: left;
-  padding-right: 0;
+  padding: 10px 30px;
   background-color: #023117;
   color: #fff;
   text-align: center;
   margin-right: 12px;
-
-  font-size: 14px;
-  text-transform: uppercase;
+  font-size: 16px;
   line-height: 40px;
 }
 
@@ -413,7 +407,9 @@ nav img {
   right: 0px;
   top: 340px;
 }
-
+.carousel.slide {
+  height: 100%;
+}
 #main_slider .carousel-control-next,
 #main_slider .carousel-control-prev {
   border-radius: 0 5px;
@@ -1522,59 +1518,79 @@ div.news div.item {
   border-bottom: 0;
 }
 div.workshop div.item.active,
-div.news div.item.active {
+div.news div.item.active,
+.clickedArticle {
   max-height: 4000px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
-  padding-bottom: 80px;
-  border-bottom: 2px solid #00000056;
+  padding: 80px;
+  -webkit-box-shadow: 7px 7px 14px 6px rgba(0, 0, 0, 0.19);
+  box-shadow: 7px 7px 14px 6px rgba(0, 0, 0, 0.19);
 }
-
-div.newswrap div div h2 {
+.clickedArticle {
+  width: 65%;
+  margin: 20px auto;
+  padding: 60px;
+}
+div.newswrap div div h2,
+.clickedArticle h2 {
   font-family: "Roboto Slab", serif;
   font-size: 40px;
   padding: 5px 20px 5px 0;
   display: inline-block;
   flex-basis: 100%;
 }
-div.newswrap div div h3 {
+div.newswrap div div h3,
+.clickedArticle h3 {
   font-size: 13px;
   color: rgb(133, 133, 133);
   flex-basis: 100%;
   padding: 0;
 }
-div.newswrap div div h3 a {
+div.newswrap div div h3 a,
+.clickedArticle h3 a {
   margin-left: 10px;
   font-size: 13px;
   color: rgb(133, 133, 133);
   flex-basis: 100%;
   margin-bottom: 20px;
 }
-div.newswrap div div h3 a i {
+div.newswrap div div h3 a i,
+.clickedArticle h3 a i {
   font-size: 13px;
 }
-div.newswrap div div a:hover {
+div.newswrap div div a:hover,
+.clickedArticle h3 a:hover {
   color: black;
 }
-div.newswrap div div p {
+div.newswrap div div p,
+.clickedArticle p {
   flex-basis: 90%;
   font-size: 19px;
   margin: 20px 0;
   line-height: 30px;
   text-align: justify;
 }
-div.newswrap div div img + p {
+
+div.newswrap div div img + p,
+.clickedArticle img + p {
   flex-basis: 40%;
   display: block;
 }
-div.newswrap div img {
+
+div.newswrap div img,
+.clickedArticle img {
   flex-basis: 30%;
   display: block;
   width: 350px;
   max-height: 100%;
   margin-top: 20px;
+}
+.clickedArticle img.news {
+  flex-basis: 15%;
+  width: 250px;
 }
 .fas.fa-chevron-circle-down {
   cursor: pointer;

@@ -90,6 +90,9 @@
 /*------------------------------------------------------------------- 599px x 280px ---------------------------------------------------------------------*/
 
 @media only screen and (min-width: 280px) and (max-width: 599px) {
+  .banner_taital {
+    padding: 0;
+  }
   .gallery_taital {
     padding: 20px;
     font-size: 50px;
@@ -166,10 +169,12 @@
     top: 0;
   }
   div.workshop div.item,
-  div.news div.item {
+  div.news div.item,
+  .clickedArticle {
     margin: 0;
   }
-  div.newswrap div h1 {
+  div.newswrap div h1,
+  .clickedArticle h1 {
     font-size: 35px;
   }
   div.newswrap div h1:hover {
@@ -451,7 +456,7 @@
     font-size: 30px;
   }
   .coffee_text {
-    font-size: 40px;
+    font-size: 30px;
   }
   .there_text {
     width: 100%;
@@ -520,6 +525,9 @@
   .gallery_section_2 .row {
     width: 100%;
   }
+  .banner_taital {
+    padding: 0;
+  }
 }
 @media (min-width: 900px) and (max-width: 1399px) {
   .banner_section .logo2 {
@@ -538,6 +546,9 @@
   }
 }
 @media (max-width: 900px) {
+  .banner_section .container {
+    height: 100%;
+  }
   .banner_section {
     height: 500px;
   }
@@ -545,24 +556,31 @@
     width: 100%;
   }
   div.newswrap div.workshop,
-  div.newswrap div.news {
+  div.newswrap div.news,
+  .clickedArticle {
     width: 98%;
   }
-  div.newswrap div div p {
+  div.newswrap div div p,
+  .clickedArticle p {
     flex-basis: 95%;
   }
   div.newswrap div div img + p,
-  div.newswrap div img {
+  div.newswrap div img,
+  .clickedArticle img + p {
     flex-basis: 95%;
   }
-  div.newswrap div div h2 {
+  div.newswrap div div h2,
+  .clickedArticle h2 {
     font-size: 35px;
   }
   div.workshop div.item.active,
-  div.news div.item.active {
+  div.news div.item.active,
+  .clickedArticle {
     margin-bottom: 50px;
+    padding: 50px 5px;
   }
-  div.newswrap div i {
+  div.newswrap div i,
+  .clickedArticle i {
     font-size: 30px;
     top: 40px;
   }

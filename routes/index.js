@@ -1,9 +1,21 @@
 var express = require("express");
+const News = require("../models/news");
 var router = express.Router();
 const config = require("../config");
 const nodemailer = require("nodemailer");
+
 router.get("/", function (req, res, next) {
-  res.render("index", { title: "Start - Herbaciarnia Ziołowa" });
+  let datas = [];
+  const findNews = News.find().limit(3);
+  findNews.find({}).sort({ created: -1 });
+  findNews.find({}, (err, doc) => {
+    datas = doc;
+    doc.forEach((article, index) => {
+      datas[index].created = article.created.toISOString().slice(0, 10);
+    });
+    console.log(datas);
+    res.render("index", { title: "Start - Herbaciarnia Ziołowa", datas });
+  });
 });
 
 router.get("/login", (req, res) => {
