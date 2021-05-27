@@ -23,7 +23,7 @@ block content
       h1(class='activator' id='news' ) Aktualności
         i.fas.fa-chevron-circle-down.activator(id='news')
       each item in datas.item2
-       if item.title!==clickedArticle.title
+       if clickedArticle?item.title!==clickedArticle.title:true
         .item
           h2=item.title
           h3(class='date')
