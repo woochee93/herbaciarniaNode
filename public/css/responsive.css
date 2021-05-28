@@ -90,6 +90,10 @@
 /*------------------------------------------------------------------- 599px x 280px ---------------------------------------------------------------------*/
 
 @media only screen and (min-width: 280px) and (max-width: 599px) {
+  .carousel-inner {
+    min-height: 350px;
+    margin-top: 30px;
+  }
   .banner_taital {
     padding: 0;
   }
@@ -435,10 +439,10 @@
 
 @media (max-width: 575px) {
   #main_slider a.carousel-control-prev {
-    top: 90%;
+    top: 100%;
   }
   #main_slider a.carousel-control-next {
-    top: 90%;
+    top: 100%;
   }
   .navbar {
     padding: 20px 0px;
@@ -554,7 +558,7 @@
     height: 100%;
   }
   .banner_section {
-    height: 500px;
+    min-height: 500px;
   }
   .banner_section .container {
     width: 100%;
@@ -684,6 +688,9 @@
   }
 }
 @media (min-width: 781px) and (max-width: 1000px) {
+  .carousel-inner {
+    min-height: 560px;
+  }
   .gallery_taital,
   h1.news {
     font-size: 35px;
