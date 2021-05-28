@@ -93,9 +93,11 @@
   .banner_taital {
     padding: 0;
   }
-  .gallery_taital {
-    padding: 20px;
-    font-size: 50px;
+  .gallery_taital,
+  h1.news {
+    padding: 20px 0;
+    font-size: 30px;
+    margin: 0;
   }
   .gallery_section_2 .row {
     width: 100%;
@@ -176,6 +178,7 @@
   div.newswrap div h1,
   .clickedArticle h1 {
     font-size: 35px;
+    padding: 15px 30px;
   }
   div.newswrap div h1:hover {
     transform: translateX(0);
@@ -615,8 +618,9 @@
   }
 }
 @media (min-width: 600px) and (max-width: 780px) {
-  .gallery_taital {
-    font-size: 40px;
+  .gallery_taital,
+  h1.news {
+    font-size: 35px;
   }
   article.news {
     width: 90%;
@@ -674,8 +678,9 @@
   }
 }
 @media (min-width: 781px) and (max-width: 1000px) {
-  .gallery_taital {
-    font-size: 40px;
+  .gallery_taital,
+  h1.news {
+    font-size: 35px;
   }
   .contact_text.address h1,
   .contact_text.open_hours h1 {
