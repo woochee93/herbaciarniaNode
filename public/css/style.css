@@ -1370,15 +1370,13 @@ div.hamburger.active {
 div.hamburger ul {
   position: relative;
   background-color: rgb(3, 20, 0);
-  /* background-color: black; */
 }
 div.hamburger ul.active li:first-of-type {
   text-align: center;
   display: block;
-  margin: 15px 0;
+  margin: 0 0 15px 0;
 }
 div.hamburger ul li:first-of-type i {
-  /* font-family: "Montserrat", sans-serif; */
   color: rgba(255, 255, 255, 0.5);
   font-size: 25px;
   width: 55px;
