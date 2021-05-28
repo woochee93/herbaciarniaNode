@@ -3,19 +3,25 @@ extends layout
 block content
     h1.news Menu Herbaciarni
     .menu
-        img.menu(src='./images/menu.png')
+        a(href='./images/menu.png' data-lightbox='Menu - Herbaciarnia Ziołowa' data-title='Zobacz co serwujemy!' alt='Menu - Herbaciarnia Ziołowa')
+            img.menu(src='./images/menu.png')
     script.
         const img = document.querySelector('img.menu')
+        const linkImg = document.querySelector('.menu a')
         if (window.innerWidth < window.innerHeight) {
         img.src = './images/menuMobile.png'
+        linkImg.href = './images/menuMobile.png'
         } else {
         img.src = './images/menu.png'
+        linkImg.href = './images/menu.png'
         }
         window.addEventListener('resize', () => {
         if (window.innerWidth < window.innerHeight) {
         img.src = './images/menuMobile.png'
+        linkImg.href = './images/menuMobile.png'
         } else {
         img.src = './images/menu.png'
+        linkImg.href = './images/menu.png'
         }
         })
 
