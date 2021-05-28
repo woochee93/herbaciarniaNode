@@ -97,7 +97,7 @@
   h1.news {
     padding: 20px 0;
     font-size: 30px;
-    margin: 0;
+    margin: 20px 0;
   }
   .gallery_section_2 .row {
     width: 100%;
@@ -277,6 +277,7 @@
     border: 1px solid #fff;
   }
   .navbar-expand-lg .navbar-nav .nav-link {
+    color: white;
     text-align: center;
   }
 
@@ -368,6 +369,7 @@
     border: 1px solid #fff;
   }
   .navbar-expand-lg .navbar-nav .nav-link {
+    color: white;
     text-align: center;
   }
 
@@ -449,6 +451,7 @@
     border: 1px solid #fff;
   }
   .navbar-expand-lg .navbar-nav .nav-link {
+    color: white;
     text-align: center;
   }
   .banner_section {
@@ -675,6 +678,9 @@
   ul.admin.list li .buttons a {
     margin: 20px;
     padding: 10px 20px;
+  }
+  .nav-link {
+    color: white;
   }
 }
 @media (min-width: 781px) and (max-width: 1000px) {
