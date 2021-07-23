@@ -444,6 +444,9 @@ nav img {
   width: 100%;
   float: left;
 }
+.about_section.layout_padding .container .row {
+  align-items: center;
+}
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap");
 .about_taital {
   width: 100%;
@@ -1012,7 +1015,7 @@ h3.decorate_text {
 }
 
 .contact_section.layout_padding.index {
-  padding-top: 110px;
+  padding-top: 50px;
 }
 .contact_section_2 {
   width: 100%;
@@ -1584,7 +1587,7 @@ div.newswrap div div p,
 
 div.newswrap div div img + p,
 .clickedArticle img + p {
-  flex-basis: 40%;
+  flex-basis: 50%;
   display: block;
 }
 
