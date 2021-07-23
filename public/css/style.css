@@ -276,9 +276,6 @@ button {
   color: white;
 }
 
-.navbar {
-  padding: 15px 1rem;
-}
 nav li {
   margin: 0 20px;
 }
@@ -309,7 +306,7 @@ nav img {
 .banner_section {
   width: 100%;
   float: left;
-  background-image: url(../images/bannersample.jpg);
+  background-image: url(../images/banertest.jpg);
   background-position: center;
   background-size: cover;
   padding: 10px 0px 25px 0px;
@@ -322,11 +319,8 @@ nav img {
   width: 50%;
 }
 .banner_section .logo2 {
-  background-color: #010700a2;
-  border: 2px solid rgb(255, 255, 255);
   border-radius: 0 55px;
   width: 550px;
-  padding: 60px 50px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -459,10 +453,11 @@ nav img {
   font-weight: bold;
   /* font-family: "Playfair Display", serif; */
   font-family: "Roboto Slab", serif;
+  line-height: 1.4;
 }
 
 .about_img img {
-  max-width: 100%;
+  max-width: 90%;
 }
 .about_text {
   line-height: 32px;
