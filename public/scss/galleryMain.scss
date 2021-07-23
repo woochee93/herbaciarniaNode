@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'sans-serif';
+}
+
+body {
+    min-height: 150vh;
+}
+
+.main_gallery {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__title {
+        font-family: "Roboto Slab", serif;
+        color: #00200a;
+        flex-basis: 100%;
+        font-size: 50px;
+        text-align: center;
+        margin: 20px;
+
+    }
+
+    &__subtitle {
+        padding: 0 25%;
+        flex-basis: 100%;
+        font-size: 18px;
+        text-align: justify;
+    }
+}
+
+.gallery_wrapper {
+    margin: 65px 0 150px 0;
+    display: flex;
+    flex-basis: 100%;
+    background-color: rgb(0, 26, 4);
+    justify-content: space-between;
+    padding: 0 150px;
+
+    @media (max-width:1024px) {
+        padding: 0;
+        flex-wrap: wrap;
+    }
+
+    &__element {
+        box-shadow: 2px 2px 10px black;
+        height: 520px;
+        flex-basis: 15%;
+        transform: scale(1.1);
+        transition: 0.5s;
+        overflow: hidden;
+
+        @media (max-width:1600px) {
+            // flex-basis: 13%;
+            height: 400px;
+        }
+
+        @media (max-width:1350px) {
+            flex-basis: 16%;
+            height: 350px;
+        }
+
+        @media (max-width:1024px) {
+            flex-basis: 100%;
+            height: 180px;
+        }
+
+        &-background {
+
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(../images/DSC_0105.jpg);
+            background-size: cover;
+            background-position: center;
+            transition: 15s;
+        }
+
+        &:nth-of-type(2) .gallery_wrapper__element-background {
+            background-image: url(../images/DSC_0128.jpg);
+        }
+
+        &:nth-of-type(3) .gallery_wrapper__element-background {
+            background-image: url(../images/DSC_0240.jpg);
+        }
+
+        &:nth-of-type(4) .gallery_wrapper__element-background {
+            background-image: url(../images/DSC_0511.jpg);
+        }
+
+        &:nth-of-type(5) .gallery_wrapper__element-background {
+            background-image: url(../images/DSC_0153-3.jpg);
+        }
+
+        &-cover {
+            display: block;
+            z-index: 2;
+            font-family: 'Montserrat';
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 500px;
+            text-align: center;
+            color: white;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            opacity: 0;
+            transition: 0.5s;
+            overflow: hidden;
+
+            @media (max-width:1600px) {
+                line-height: 400px;
+                font-size: 25px;
+            }
+
+            @media (max-width:1350px) {
+                font-size: 19px;
+                line-height: 350px;
+            }
+
+            @media (max-width:1024px) {
+                opacity: 0.8;
+                line-height: 200px;
+                font-size: 35px;
+            }
+
+            &:hover {
+                cursor: pointer;
+                opacity: 1;
+
+            }
+        }
+    }
+}

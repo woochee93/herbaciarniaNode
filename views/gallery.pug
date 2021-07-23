@@ -3,16 +3,39 @@ mixin galleryImg(src, collectionName, title)
     a(href=src data-lightbox=collectionName data-title=title alt=title)
         img(src=src)
 block content
-    .gallery
-        h1.gallery_taital Galeria
-        +galleryImg('./images/DSC.JPEG','image-1','Herbaciarnia Ziołowa - Sobótka')
-        +galleryImg('./images/DSC_0166.jpg','image-1','Herbaciarnia Ziołowa - Sobótka')
-        +galleryImg('./images/DSC_0240.jpg','image-1','Herbaciarnia Ziołowa - Sobótka')
-        +galleryImg('./images/DSC_0101.jpg','image-1','Herbaciarnia Ziołowa - Sobótka')
-        +galleryImg('./images/DSC_0465.jpg','image-1','Herbaciarnia Ziołowa - Sobótka')
-        +galleryImg('./images/DSC_0128.jpg','image-1','Herbaciarnia Ziołowa - Sobótka')
-        +galleryImg('./images/DSC_0509.jpg','image-1','Herbaciarnia Ziołowa - Sobótka')
-        +galleryImg('./images/DSC_0394.JPEG','image-1','Herbaciarnia Ziołowa - Sobótka')
-        +galleryImg('./images/DSC_0511.jpg','image-1','Herbaciarnia Ziołowa - Sobótka')
-        +galleryImg('./images/DSC_0144.jpg','image-1','Herbaciarnia Ziołowa - Sobótka')
-        +galleryImg('./images/DSC_0153-3.jpg','image-1','Herbaciarnia Ziołowa - Sobótka')
+    .main_gallery
+    .main_gallery__title Galeria
+    .main_gallery__subtitle
+        | Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita non neque
+        | necessitatibus aliquid.
+    .gallery_wrapper
+        a(href='./gallery/interior').gallery_wrapper__element
+            .gallery_wrapper__element-background
+            .gallery_wrapper__element-cover Wn&eogon;trze
+        a(href='./gallery/tea').gallery_wrapper__element
+            .gallery_wrapper__element-background
+            .gallery_wrapper__element-cover Herbaty
+        a(href='./gallery/handicraft').gallery_wrapper__element
+            .gallery_wrapper__element-background
+            .gallery_wrapper__element-cover R&eogon;kodzie&lstrok;a
+        a(href='./gallery/paintings').gallery_wrapper__element
+            .gallery_wrapper__element-background
+            .gallery_wrapper__element-cover Obrazy
+        a(href='./gallery/workshops').gallery_wrapper__element
+            .gallery_wrapper__element-background
+            .gallery_wrapper__element-cover Warsztaty
+    script(src='./js/galleryScript.js')
+
+    //- .gallery
+    //-     h1.gallery_taital Galeria
+    //-     +galleryImg('./images/DSC.JPEG','image-1','Herbaciarnia Ziołowa - Sobótka')
+    //-     +galleryImg('./images/DSC_0166.jpg','image-1','Herbaciarnia Ziołowa - Sobótka')
+    //-     +galleryImg('./images/DSC_0240.jpg','image-1','Herbaciarnia Ziołowa - Sobótka')
+    //-     +galleryImg('./images/DSC_0101.jpg','image-1','Herbaciarnia Ziołowa - Sobótka')
+    //-     +galleryImg('./images/DSC_0465.jpg','image-1','Herbaciarnia Ziołowa - Sobótka')
+    //-     +galleryImg('./images/DSC_0128.jpg','image-1','Herbaciarnia Ziołowa - Sobótka')
+    //-     +galleryImg('./images/DSC_0509.jpg','image-1','Herbaciarnia Ziołowa - Sobótka')
+    //-     +galleryImg('./images/DSC_0394.JPEG','image-1','Herbaciarnia Ziołowa - Sobótka')
+    //-     +galleryImg('./images/DSC_0511.jpg','image-1','Herbaciarnia Ziołowa - Sobótka')
+    //-     +galleryImg('./images/DSC_0144.jpg','image-1','Herbaciarnia Ziołowa - Sobótka')
+    //-     +galleryImg('./images/DSC_0153-3.jpg','image-1','Herbaciarnia Ziołowa - Sobótka')
