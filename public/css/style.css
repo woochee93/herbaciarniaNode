@@ -1533,7 +1533,7 @@ div.news div.item.active,
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
-  padding: 80px;
+  padding: 55px 80px;
   -webkit-box-shadow: 7px 7px 14px 6px rgba(0, 0, 0, 0.19);
   box-shadow: 7px 7px 14px 6px rgba(0, 0, 0, 0.19);
 }
@@ -1545,7 +1545,7 @@ div.news div.item.active,
 div.newswrap div div h2,
 .clickedArticle h2 {
   font-family: "Roboto Slab", serif;
-  font-size: 40px;
+  font-size: 35px;
   padding: 5px 20px 5px 0;
   display: inline-block;
   flex-basis: 100%;
@@ -1592,7 +1592,7 @@ div.newswrap div img,
 .clickedArticle img {
   flex-basis: 30%;
   display: block;
-  width: 350px;
+  width: 300px;
   max-height: 100%;
   margin-top: 20px;
 }
