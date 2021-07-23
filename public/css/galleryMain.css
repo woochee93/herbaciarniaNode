@@ -125,27 +125,35 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(../images/DSC_0105.jpg);
+  background-image: url(../images/gallery/tea.jpg);
   background-size: cover;
   background-position: center;
   -webkit-transition: 15s;
   transition: 15s;
 }
 
+.gallery_wrapper__element:nth-of-type(1) .gallery_wrapper__element-background {
+  background-position: 35%;
+}
+
 .gallery_wrapper__element:nth-of-type(2) .gallery_wrapper__element-background {
-  background-image: url(../images/DSC_0128.jpg);
+  background-image: url(../images/gallery/interior.jpg);
 }
 
 .gallery_wrapper__element:nth-of-type(3) .gallery_wrapper__element-background {
-  background-image: url(../images/DSC_0240.jpg);
+  background-image: url(../images/gallery/store.jpg);
+  background-position: 67% 25%;
+  background-size: cover;
 }
 
 .gallery_wrapper__element:nth-of-type(4) .gallery_wrapper__element-background {
-  background-image: url(../images/DSC_0511.jpg);
+  background-image: url(../images/gallery/events.jpg);
+  background-position: 65% 25%;
 }
 
 .gallery_wrapper__element:nth-of-type(5) .gallery_wrapper__element-background {
-  background-image: url(../images/DSC_0153-3.jpg);
+  background-image: url(../images/gallery/workshops.jpg);
+  background-position: 36% 25%;
 }
 
 .gallery_wrapper__element-cover {
@@ -159,7 +167,7 @@ body {
   color: white;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.65);
   opacity: 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
