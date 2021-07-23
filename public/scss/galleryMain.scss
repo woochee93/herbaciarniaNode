@@ -23,6 +23,10 @@ body {
         text-align: center;
         margin: 20px;
 
+        @media (max-width:1024px) {
+            font-size: 40px;
+        }
+
     }
 
     &__subtitle {
@@ -30,6 +34,18 @@ body {
         flex-basis: 100%;
         font-size: 18px;
         text-align: justify;
+
+        @media (max-width:1600px) {
+            padding: 0 20%;
+        }
+
+        @media (max-width:1350px) {
+            padding: 0 10%;
+        }
+
+        @media (max-width:1024px) {
+            padding: 0 5%;
+        }
     }
 }
 
@@ -127,7 +143,7 @@ body {
 
             @media (max-width:1024px) {
                 opacity: 0.8;
-                line-height: 200px;
+                line-height: 180px;
                 font-size: 35px;
             }
 
