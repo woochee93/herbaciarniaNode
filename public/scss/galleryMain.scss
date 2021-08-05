@@ -46,6 +46,29 @@ body {
             padding: 0 5%;
         }
     }
+
+    &__returnButton {
+        color: white;
+        background-color: #023117;
+        padding: 10px 20px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 15px;
+
+        @media (max-width:700px) {
+            width: 100vw;
+        }
+    }
+
+    &__linkButton {
+        width: auto !important;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        @media (max-width:700px) {
+            position: relative;
+        }
+    }
 }
 
 .gallery_wrapper {

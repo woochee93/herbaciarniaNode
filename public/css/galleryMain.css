@@ -60,6 +60,33 @@ body {
   }
 }
 
+.main_gallery__returnButton {
+  color: white;
+  background-color: #023117;
+  padding: 10px 20px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+}
+
+@media (max-width: 700px) {
+  .main_gallery__returnButton {
+    width: 100vw;
+  }
+}
+
+.main_gallery__linkButton {
+  width: auto !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media (max-width: 700px) {
+  .main_gallery__linkButton {
+    position: relative;
+  }
+}
+
 .gallery_wrapper {
   margin: 65px 0 150px 0;
   display: -webkit-box;
