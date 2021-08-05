@@ -1,0 +1,21 @@
+doctype html
+
+
+html
+  head
+    include head.pug
+    if path == '/admin'
+      style
+        include ../../public/css/admin.css
+    if path == '/login'
+      style
+        include ../../public/css/adminLogin.css
+  body
+    include nav.pug
+    block content
+    include footer.pug
+    include copyright.pug
+    button.scrollToTop
+      i.fas.fa-angle-double-up
+      i.fas.fa-angle-double-up.second
+    include scripts.pug

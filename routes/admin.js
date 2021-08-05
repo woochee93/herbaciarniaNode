@@ -39,7 +39,10 @@ router.get("/", (req, res) => {
     datas.item1 = docs;
     findNews.find({}, (err, docs) => {
       datas.item2 = docs;
-      res.render("admin/index.pug", { title: "Panel administartora", datas });
+      res.render("admin/adminIndex.pug", {
+        title: "Panel administartora",
+        datas,
+      });
     });
   });
 });
