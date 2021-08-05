@@ -1,0 +1,13 @@
+extends ../../layout/layout 
+mixin galleryImg(src, collectionName, title)
+    a(href=src data-lightbox=collectionName data-title=title alt=title)
+        img(src=src)
+block content
+   
+    .gallery
+        h1.main_gallery__title Galeria - Herbata
+        +galleryImg('/images/DSC_0144.jpg','image-1','Herbaciarnia Ziołowa - Sobótka')
+        +galleryImg('/images/DSC_0153-3.jpg','image-1','Herbaciarnia Ziołowa - Sobótka')
+    link(href='../lightbox2/dist/css/lightbox.css' rel='stylesheet')
+    script(src='/js/jquery-3.6.0.min.js')
+    script(src='../lightbox2/dist/js/lightbox.js')
