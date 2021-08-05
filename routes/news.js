@@ -23,7 +23,10 @@ router.get("/", function (req, res, next) {
     datas.item1 = docs;
     findNews.find({}, (err, docs) => {
       datas.item2 = docs;
-      res.render("news", { title: "News", datas });
+      res.render("news", {
+        title: "Aktualności - Herbaciarnia Ziołowa - Sobótka",
+        datas,
+      });
     });
   });
 });
@@ -50,7 +53,11 @@ router.get("/:id", function (req, res, next) {
     findNews.find({}, (err, docs) => {
       console.log(clickedArticle);
       datas.item2 = docs;
-      res.render("news", { title: "Aktualności", datas, clickedArticle });
+      res.render("news", {
+        title: "Aktualności - Herbaciarnia Ziołowa - Sobótka",
+        datas,
+        clickedArticle,
+      });
     });
   });
 });

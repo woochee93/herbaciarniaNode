@@ -13,7 +13,10 @@ router.get("/", function (req, res, next) {
     doc.forEach((article, index) => {
       datas[index].created = article.created.toISOString().slice(0, 10);
     });
-    res.render("index", { title: "Start - Herbaciarnia Ziołowa", datas });
+    res.render("index", {
+      title: "Start - Herbaciarnia Ziołowa - Sobótka",
+      datas,
+    });
   });
 });
 
