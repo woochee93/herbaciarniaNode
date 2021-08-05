@@ -1354,7 +1354,7 @@ iframe.facebook {
 div.hamburger {
   position: fixed;
   z-index: 5;
-  top: 30px;
+  top: 0;
   left: 0;
   color: white;
   transform: translateX(-100%);
