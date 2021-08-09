@@ -16,8 +16,8 @@ router.get("/", function (req, res, next) {
     item2: [],
   };
   //sort by add date to db
-  findNews.find({}).sort({ created: -1 });
-  findWorkshop.find({}).sort({ created: -1 });
+  findNews.find({}).limit(7).sort({ created: -1 });
+  findWorkshop.find({}).limit(7).sort({ created: -1 });
   //doc is array db items
   findWorkshop.find({}, (err, docs) => {
     datas.item1 = docs;

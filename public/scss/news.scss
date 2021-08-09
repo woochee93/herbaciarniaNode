@@ -1,7 +1,21 @@
 .moreArticle {
     display: none;
+    font-size: 20px;
+    text-align: right;
+    margin-bottom: 35px;
 }
 
 .moreArticle.active {
     display: block;
+}
+
+.moreNews__link {
+    padding: 7px 15px;
+    background-color: #042000;
+    color: rgb(204, 204, 204);
+
+    &:hover {
+        background-color: #094100;
+        color: white !important;
+    }
 }
