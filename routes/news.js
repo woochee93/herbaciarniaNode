@@ -41,7 +41,6 @@ router.get("/moreNews/:from", function (req, res, next) {
     dataNewsLength = docs.length;
     newsdata = docs;
     newsdata = newsdata.slice((from - 1) * 7, (from - 1) * 7 + 7);
-    console.log(newsdata);
     res.render("news/moreNews", {
       title: "Wszystkie wydarzenia - Herbaciarnia Ziołowa - Sobótka",
       newsdata,
@@ -61,7 +60,6 @@ router.get("/moreWorkshops/:from", function (req, res, next) {
     dataNewsLength = docs.length;
     newsdata = docs;
     newsdata = newsdata.slice((from - 1) * 7, (from - 1) * 7 + 7);
-    console.log(newsdata);
     res.render("news/moreWorkshops", {
       title: "Wszystkie warsztaty - Herbaciarnia Ziołowa - Sobótka",
       newsdata,
