@@ -23,10 +23,50 @@ router.get("/", function (req, res, next) {
     datas.item1 = docs;
     findNews.find({}, (err, docs) => {
       datas.item2 = docs;
-      res.render("news", {
+      res.render("news/news", {
         title: "Aktualności - Herbaciarnia Ziołowa - Sobótka",
         datas,
       });
+    });
+  });
+});
+////click button moreInfo
+router.get("/moreNews/:from", function (req, res, next) {
+  // const from = req.params.from ? req.params.from : 0;
+  const from = req.params.from;
+  const findNews = News.find().sort({ created: -1 });
+  let dataNewsLength = 0;
+  let newsdata = [];
+  findNews.find({}, (err, docs) => {
+    dataNewsLength = docs.length;
+    newsdata = docs;
+    newsdata = newsdata.slice((from - 1) * 7, (from - 1) * 7 + 7);
+    console.log(newsdata);
+    res.render("news/moreNews", {
+      title: "Wszystkie wydarzenia - Herbaciarnia Ziołowa - Sobótka",
+      newsdata,
+      from,
+      dataNewsLength,
+    });
+  });
+});
+////click button moreWorkshops
+router.get("/moreWorkshops/:from", function (req, res, next) {
+  // const from = req.params.from ? req.params.from : 0;
+  const from = req.params.from;
+  const findWorkshop = Workshop.find().sort({ created: -1 });
+  let dataNewsLength = 0;
+  let newsdata = [];
+  findWorkshop.find({}, (err, docs) => {
+    dataNewsLength = docs.length;
+    newsdata = docs;
+    newsdata = newsdata.slice((from - 1) * 7, (from - 1) * 7 + 7);
+    console.log(newsdata);
+    res.render("news/moreWorkshops", {
+      title: "Wszystkie warsztaty - Herbaciarnia Ziołowa - Sobótka",
+      newsdata,
+      from,
+      dataNewsLength,
     });
   });
 });
@@ -53,7 +93,7 @@ router.get("/:id", function (req, res, next) {
     findNews.find({}, (err, docs) => {
       console.log(clickedArticle);
       datas.item2 = docs;
-      res.render("news", {
+      res.render("news/news", {
         title: "Aktualności - Herbaciarnia Ziołowa - Sobótka",
         datas,
         clickedArticle,

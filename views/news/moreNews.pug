@@ -1,0 +1,24 @@
+extends ../layout/layout
+block content
+
+  .news-list-wrap
+    h1.news Wydarzenia
+    .newslist
+      each item in newsdata
+        .news-element
+          h2.news-element__title=item.title
+          h3(class='date news-element__date')
+            span(class='news-element__date-span')=item.created
+            if item.facebook 
+              a(href=item.facebook target='_blank' class='news-element__facebook-link')
+                i.fab.fa-facebook.news-element__facebook-icon
+                |  Facebook
+
+          if item.image
+            img(src=item.image class='news-element__image')
+          p(class='news-element__text')=item.description
+    ul.pagesNews
+        - var n = 0;
+        while n<Math.ceil(dataNewsLength/7)
+            li(class='pagesNews__element')
+                a(href=`./${n +1}` class=((n+1)==from)?'pagesNews__link active':'pagesNews__link')=(n++ + 1)

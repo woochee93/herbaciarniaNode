@@ -21,7 +21,7 @@ router.get("/", function (req, res, next) {
 });
 
 router.get("/login", (req, res) => {
-  res.render("login", { title: "Logowanie - Panel administratora" });
+  res.render("admin/login", { title: "Logowanie - Panel administratora" });
 });
 router.post("/login", (req, res) => {
   const body = req.body;

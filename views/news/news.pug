@@ -1,4 +1,4 @@
-extends layout/layout
+extends ../layout/layout
 
 block content
   .newswrap
@@ -38,7 +38,7 @@ block content
             img(src=item.image class='news')
           p=item.description
       .moreArticle.moreArticle--news
-        a(href='/news/moreNews' class='moreNews__link') Starsze wydarzenia
+        a(href='/news/moreNews/2' class='moreNews__link') Więcej wydarzeń
              
     .workshop
       h1(class='activator' id='workshop') Warsztaty
@@ -56,7 +56,7 @@ block content
             img(src=item.image class='workshop')
           p=item.description
       .moreArticle.moreArticle--workshop
-        a(href='/news/moreWorkshops' class='moreNews__link') Starsze warsztaty
+        a(href='/news/moreWorkshops/1' class='moreNews__link') Więcej warsztatów
 
 
 

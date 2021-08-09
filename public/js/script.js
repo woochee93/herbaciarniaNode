@@ -113,8 +113,8 @@ btnsactivator.forEach((button) => {
       newsWrap.classList.toggle("active");
       itemsNews.forEach((itemNews) => {
         itemNews.classList.toggle("active");
-        moreButtonNews.classList.toggle("active");
       });
+      moreButtonNews.classList.toggle("active");
     }
     const activeBtn = btnsactivator.filter((activator) => {
       return activator.id === button.id;

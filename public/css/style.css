@@ -1437,7 +1437,7 @@ div.hamburger ul li a:hover i + span {
 
 /* /////////////////////////////NEWS */
 h1.news {
-  margin: 60px;
+  margin: 60px auto;
   font-family: "Roboto Slab", serif;
   width: 100%;
   text-align: center;
@@ -1479,7 +1479,7 @@ div.newswrap div.news {
   left: 0;
   color: #023117;
   margin: 20px auto;
-  width: 65%;
+  width: 75%;
   max-height: 100px;
 }
 div.newswrap div.workshop {
@@ -1537,7 +1537,7 @@ div.news div.item.active,
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
-  padding: 55px 80px;
+  padding: 45px 80px;
   -webkit-box-shadow: 7px 7px 14px 6px rgba(0, 0, 0, 0.19);
   box-shadow: 7px 7px 14px 6px rgba(0, 0, 0, 0.19);
 }

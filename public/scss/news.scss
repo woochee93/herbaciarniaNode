@@ -19,3 +19,106 @@
         color: white !important;
     }
 }
+
+
+
+////////////////////news more
+
+.newslist {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+.news-element {
+    flex-basis: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    align-items: center;
+
+    @media(max-width: 1024px) {
+        justify-content: center;
+
+    }
+
+
+    &__title {
+        flex-basis: 100%;
+        font-size: 35px;
+
+        @media(max-width: 1024px) {
+            font-size: 23px;
+            text-align: center;
+
+        }
+
+    }
+
+    &__date {
+        flex-basis: 100%;
+
+        @media(max-width: 1024px) {
+            font-size: 18px;
+
+        }
+    }
+
+    &__facebook-link {
+        margin-left: 10px;
+
+        @media(max-width: 1024px) {
+            font-size: 14px;
+
+        }
+    }
+
+    &__date-span {
+        margin-left: 10px;
+
+        @media(max-width: 1024px) {
+            font-size: 14px;
+
+        }
+    }
+
+    &__image {
+        max-width: 150px;
+        height: auto;
+
+        @media(max-width: 1024px) {
+            max-width: 70%;
+
+        }
+    }
+
+    &__text {
+        font-size: 16px;
+        flex-basis: 70%;
+
+        @media(max-width: 1024px) {
+            font-size: 14px;
+            flex-basis: 90%;
+        }
+    }
+}
+
+.pagesNews {
+    width: 100%;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+
+    &__element {
+        margin: 20px 5px 50px;
+    }
+
+    &__link {
+        padding: 0px 5px;
+    }
+
+    &__link.active {
+        border-bottom: 1px solid black;
+    }
+}

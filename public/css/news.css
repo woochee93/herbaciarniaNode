@@ -19,4 +19,130 @@
   background-color: #094100;
   color: white !important;
 }
+
+.newslist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.news-element {
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .news-element {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.news-element__title {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  font-size: 35px;
+}
+
+@media (max-width: 1024px) {
+  .news-element__title {
+    font-size: 23px;
+    text-align: center;
+  }
+}
+
+.news-element__date {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+@media (max-width: 1024px) {
+  .news-element__date {
+    font-size: 18px;
+  }
+}
+
+.news-element__facebook-link {
+  margin-left: 10px;
+}
+
+@media (max-width: 1024px) {
+  .news-element__facebook-link {
+    font-size: 14px;
+  }
+}
+
+.news-element__date-span {
+  margin-left: 10px;
+}
+
+@media (max-width: 1024px) {
+  .news-element__date-span {
+    font-size: 14px;
+  }
+}
+
+.news-element__image {
+  max-width: 150px;
+  height: auto;
+}
+
+@media (max-width: 1024px) {
+  .news-element__image {
+    max-width: 70%;
+  }
+}
+
+.news-element__text {
+  font-size: 16px;
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+}
+
+@media (max-width: 1024px) {
+  .news-element__text {
+    font-size: 14px;
+    -ms-flex-preferred-size: 90%;
+        flex-basis: 90%;
+  }
+}
+
+.pagesNews {
+  width: 100%;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pagesNews__element {
+  margin: 20px 5px 50px;
+}
+
+.pagesNews__link {
+  padding: 0px 5px;
+}
+
+.pagesNews__link.active {
+  border-bottom: 1px solid black;
+}
 /*# sourceMappingURL=news.css.map */
