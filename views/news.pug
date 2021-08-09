@@ -37,6 +37,9 @@ block content
           if item.image
             img(src=item.image class='news')
           p=item.description
+      .moreArticle.moreArticle--news
+        a(href='/news/moreNews' class='moreNews__link') Starsze wydarzenia
+             
     .workshop
       h1(class='activator' id='workshop') Warsztaty
         i.fas.fa-chevron-circle-down.activator(id='workshop')
@@ -52,6 +55,8 @@ block content
           if item.image
             img(src=item.image class='workshop')
           p=item.description
+      .moreArticle.moreArticle--workshop
+        a(href='/news/moreWorkshops' class='moreNews__link') Starsze warsztaty
 
 
 

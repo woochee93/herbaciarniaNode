@@ -1,0 +1,8 @@
+.moreArticle {
+  display: none;
+}
+
+.moreArticle.active {
+  display: block;
+}
+/*# sourceMappingURL=news.css.map */
