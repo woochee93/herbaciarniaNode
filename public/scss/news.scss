@@ -40,7 +40,7 @@
 
     @media(max-width: 1024px) {
         justify-content: center;
-
+        flex-basis: 95%;
     }
 
 
@@ -49,7 +49,7 @@
         font-size: 35px;
 
         @media(max-width: 1024px) {
-            font-size: 23px;
+            font-size: 21px;
             text-align: center;
 
         }

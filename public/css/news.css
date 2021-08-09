@@ -51,6 +51,8 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -ms-flex-preferred-size: 95%;
+        flex-basis: 95%;
   }
 }
 
@@ -62,7 +64,7 @@
 
 @media (max-width: 1024px) {
   .news-element__title {
-    font-size: 23px;
+    font-size: 21px;
     text-align: center;
   }
 }
